@@ -106,9 +106,11 @@
     if(!button||!status||!inbox)return;
     button.textContent=alertEnabled?'Turn off notifications':'Enable app notifications';
     status.textContent=demoMode?'Preview: notifications are simulated; no browser permission requested.'
-      :typeof Notification==='undefined'?'System notifications are not supported in this browser. In-app alerts still work.'
-      :alertEnabled?`App notifications enabled; browser permission: ${Notification.permission}. Alerts require Leadline to be open.`
-      :'Alerts are off. You can enable notifications for wins that arrive while the app is open.';
+      :typeof Notification==='undefined'?'Android system notifications are not available here. In-app alerts still work.'
+      :Notification.permission==='denied'?'Notifications blocked by Android or Chrome. Enable Leadline notifications in your phone app/site settings, then try again.'
+      :alertEnabled && Notification.permission==='granted'?'Android permission granted. Sales alerts work while Leadline is open and a new unmatched win is imported.'
+      :Notification.permission==='default'?'Notification permission has not been granted. Tap Enable or Send test notification.'
+      :'Sales notifications are off. Tap Enable to get alerts while Leadline is open.';
     inbox.innerHTML=alerts.length?alerts.slice(0,6).map(x=>`<div class="alert-example">🔔 ${h(x.text)} <small>· ${h(new Date(x.when).toLocaleString())}</small></div>`).join(''):'<p class="help">No alerts yet. Save an unmatched Sales Win to see one here.</p>';
   }
   function winAlert(){
@@ -121,22 +123,48 @@
     }
   }
   async function toggleAlerts(){
-    if(!alertEnabled && !demoMode && typeof Notification!=='undefined' && Notification.permission==='default'){
-      // This occurs only after the user explicitly clicks Enable; browsers may still deny it.
-      try{await Notification.requestPermission();}catch{}
+    if(!alertEnabled && !demoMode){
+      if(typeof Notification==='undefined'){toast('System notifications are not available here');renderAlerts();return;}
+      if(Notification.permission==='default')try{await Notification.requestPermission();}catch{}
+      if(Notification.permission!=='granted'){
+        alertEnabled=false;
+        toast('Android notification permission is needed. Check phone notification settings.');
+        renderAlerts();return;
+      }
     }
     alertEnabled=!alertEnabled;
     if(!demoMode)localStorage.setItem(ALERT_PREF_KEY,alertEnabled?'yes':'no');
     renderAlerts();
-    toast(alertEnabled?'Leadline alerts enabled while the app is open':'Leadline alerts disabled');
+    toast(alertEnabled?'Sales Wins alerts enabled while the app is open':'Sales Wins alerts disabled');
   }
   async function appNotification(title,body,tag,{silent=false}={}){
     if(demoMode || typeof Notification==='undefined' || Notification.permission!=='granted')return false;
     try{
-      // On Android installed PWAs this must use the service-worker registration.
-      if('serviceWorker' in navigator){const reg=await navigator.serviceWorker.ready;await reg.showNotification(title,{body,tag,icon:'./icons/icon-192.png',badge:'./icons/icon-192.png',silent,data:{source:'leadline'}});return true;}
+      // Android Chrome needs showNotification via the active service worker.
+      if('serviceWorker' in navigator){
+        let reg=await navigator.serviceWorker.getRegistration('./');
+        if(!reg)reg=await navigator.serviceWorker.register('./sw.js');
+        if(!reg.active){
+          const ready=await Promise.race([navigator.serviceWorker.ready,new Promise(resolve=>setTimeout(()=>resolve(null),7000))]);
+          if(ready)reg=ready;
+        }
+        if(!reg.active || typeof reg.showNotification!=='function')return false;
+        await reg.showNotification(title,{body,tag,icon:'./icons/icon-192.png',badge:'./icons/icon-192.png',silent,data:{source:'leadline'}});
+        return true;
+      }
       new Notification(title,{body,tag,silent});return true;
     }catch(error){console.warn('Notification not available',error);return false;}
+  }
+  async function testSystemNotification(){
+    if(demoMode){winAlert();toast('Preview: system notifications are disabled in demo mode');return;}
+    if(typeof Notification==='undefined'){toast('This browser cannot show app notifications');renderAlerts();return;}
+    if(Notification.permission==='default')try{await Notification.requestPermission();}catch{}
+    if(Notification.permission!=='granted'){
+      toast('Notification permission blocked. Allow notifications in your phone settings.');renderAlerts();return;
+    }
+    const ok=await appNotification('Leadline test','Notifications are working on this device.','leadline-test-'+Date.now());
+    toast(ok?'Test notification sent. Check your notification shade.':'Test failed. Check Chrome/Android notifications and reopen Leadline.');
+    renderAlerts();
   }
   async function closeTimerNotification(){
     if(demoMode||!('serviceWorker' in navigator))return;
@@ -1119,7 +1147,7 @@
     $('timer-notification-enabled').addEventListener('change',toggleTimerNotifications);
     $('timer-notification-refresh').addEventListener('click',()=>refreshTimerNotice(true));
     bindSalesUploads();
-    $('enable-alerts').addEventListener('click',toggleAlerts);$('test-alert').addEventListener('click',()=>{winAlert();toast('Demo notification sent inside Leadline');});
+    $('enable-alerts').addEventListener('click',toggleAlerts);$('test-alert').addEventListener('click',testSystemNotification);
     $('appearance-theme').addEventListener('change',e=>{state.appearance.theme=e.target.value;applyAppearance();updatePrefs();});$('save-commission-rate').addEventListener('click',()=>{const n=Number($('sdr-commission-rate').value);if(!Number.isFinite(n)||n<0||n>100){toast('Choose a percentage from 0 to 100');return;}state.commissionRate=n;updatePrefs();toast('Estimated commission rate saved');});
     $('format-button').addEventListener('click',smartFormat);$('validate-format').addEventListener('click',validateFormat);$('formatter-note-date').value=formatterToday();$('formatter-note-date').addEventListener('change',()=>{$('formatter-note-date').dataset.userEdited='yes';});
     $('copy-format').addEventListener('click',copyResult);$('clear-format').addEventListener('click',resetFormatter);
