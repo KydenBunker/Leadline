@@ -1,0 +1,60 @@
+/* Leadline V5.5 — larger, calmer, touch-first layouts. No glass effects. */
+.entry-mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:5px;margin-bottom:20px}
+.entry-mode{color:var(--muted);background:transparent;border:0;border-radius:10px;min-height:45px;padding:10px 9px;font-size:13px;font-weight:750;line-height:1.3}
+.entry-mode.active{color:var(--text);background:var(--surface);box-shadow:0 2px 10px #0001;border:1px solid var(--border)}
+.quick-card-section{display:grid;gap:16px}
+.quick-card-section .field>span{font-size:13px!important;color:var(--text)!important;line-height:1.4}
+.quick-card-section .field small{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin-top:7px}
+.quick-card-section textarea{height:clamp(240px,32dvh,380px);min-height:240px;padding:16px!important;font-size:16px!important;line-height:1.65!important;resize:vertical}
+.quick-card-section input[type=date]{min-height:50px;font-size:16px!important}
+.quick-card-result{border:1px solid var(--border);background:var(--surface2);padding:17px;border-radius:17px;min-height:88px}
+.quick-card-placeholder{color:var(--muted);font-size:13px;line-height:1.6}
+.quick-card-title{color:var(--accent);font-size:12px;font-weight:850;margin-bottom:13px;letter-spacing:.03em}
+.quick-card-tags{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quick-card-tags>div{min-width:0;display:flex;flex-direction:column;gap:5px}
+.quick-card-tags small{font-size:11px;color:var(--muted);font-weight:650}
+.quick-card-tags strong{font-size:14px;color:var(--text);overflow-wrap:anywhere;line-height:1.35}
+.quick-card-meeting{font-size:12px;line-height:1.6;color:var(--muted);margin:16px 0 0}
+.quick-card-warnings{margin:12px 0 0;display:grid;gap:7px;font-size:12px;line-height:1.4;color:var(--muted)}
+.quick-edit-btn{margin-top:14px;padding:11px 13px;border:1px solid var(--border);border-radius:10px;color:var(--accent);background:var(--surface);font-weight:750;font-size:12px;min-height:44px}
+.quick-card-mini-help{font-size:12px;color:var(--muted);line-height:1.6}
+.required-star{color:var(--accent)}
+@media(max-width:840px){
+  /* Minimum readable sizes: former 9–11px labels were too small on Pixel. */
+  .role-tab{font-size:13px!important;line-height:1.35!important;min-height:52px!important;padding:11px 8px!important}
+  .role-tab .role-icon{font-size:20px!important}
+  .layout-heading h1{font-size:29px!important;line-height:1.2!important}
+  .layout-heading p,.heading-row p{font-size:14px!important;line-height:1.55!important;max-width:none!important}
+  .hero-content{padding:22px!important}.hero h2{font-size:25px!important;line-height:1.19!important}
+  .hero p{font-size:13px!important;max-width:100%!important;line-height:1.5!important}
+  .hero-kicker,.eyebrow{font-size:11px!important;letter-spacing:.09em!important}
+  .hero-buttons .btn{font-size:13px!important;min-height:47px!important}
+  .focus-caption{font-size:11px!important}.focus-ring-label{font-size:8px!important}
+  .heading-row h3,.panel-title h3{font-size:18px!important}
+  .panel-title p{font-size:13px!important;line-height:1.5!important}
+  .stat-card small{font-size:14px!important}.stat-card>span{font-size:12px!important}
+  .stat-card strong{font-size:31px!important}
+  .v54-bottom-nav button>span:last-child{font-size:12px!important}
+  .v54-bottom-nav button{min-height:59px!important;gap:5px!important}
+  .v54-bottom-nav .v54-nav-icon{font-size:24px!important}
+  .v54-more-head p,.v54-more-links button span{font-size:14px!important}
+  .v54-more-links button{min-height:70px!important}
+  .field>span{font-size:13px!important;line-height:1.4!important}
+  .field input,.field select,.field textarea{font-size:16px!important;min-height:48px!important}
+  .btn,.text-button{font-size:14px!important}
+  .small-muted,.help,.quiet-empty,.chart-detail,.goal-message,.source-row{font-size:13px!important;line-height:1.5!important}
+  .badge-quiet,.date-label{font-size:12px!important}
+  .v5-metric small,.v5-metric span,.v5-help{font-size:13px!important}
+  .v5-graph-panel,.v5-goal-spotlight{padding:17px!important}
+  .log-toolbar select,.search input{font-size:14px!important;min-height:47px!important}
+  dialog#appointment-dialog{width:100vw!important;max-width:none!important;max-height:94dvh!important;border-radius:23px 23px 0 0!important;position:fixed!important;top:auto!important;bottom:0!important;margin:0!important;border-bottom:0!important;overscroll-behavior:contain}
+  #appointment-dialog .dialog-head{padding:21px 20px 16px!important}
+  #appointment-dialog .dialog-head h2{font-size:24px!important}
+  #appointment-dialog .dialog-head p{font-size:13px!important;line-height:1.5!important}
+  #appointment-form{padding:18px 20px calc(18px + env(safe-area-inset-bottom))!important}
+  .dialog-footer{padding:14px 0 4px!important;gap:8px!important}
+  .dialog-footer .btn{min-height:50px!important;font-size:14px!important}
+  .quick-card-tags strong{font-size:14px!important}
+  .quick-card-result{padding:15px}
+}
+@media(max-width:390px){.role-tab{font-size:12px!important}.v54-bottom-nav button>span:last-child{font-size:11px!important}.hero h2{font-size:22px!important}}

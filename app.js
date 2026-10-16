@@ -14,7 +14,7 @@
   const PENDING_KEY='leadline-v5.4-pending-sync';
   const TYPES = ['Phone / video', 'In person'];
   const ACCENTS=['purple','blue','green','red','gold','gray','white'];
-  const SOURCES = ['Website', 'Instagram', 'Phone call', 'Walk-in', 'Referral', 'Other'];
+  const SOURCES = ['Website', 'Instagram', 'Facebook', 'Home Show', 'Phone call', 'Walk-in', 'Referral', 'Other'];
   const $ = id => document.getElementById(id);
   const safe = v => String(v ?? '').trim();
   const h = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -149,7 +149,7 @@
           if(ready)reg=ready;
         }
         if(!reg.active || typeof reg.showNotification!=='function')return false;
-        await reg.showNotification(title,{body,tag,icon:'./icons/icon-192.png',badge:'./icons/icon-192.png',silent,data:{source:'leadline'}});
+        await reg.showNotification(title,{body,tag,icon:'./icons/icon-192-bw.png',badge:'./icons/icon-192-bw.png',silent,data:{source:'leadline'}});
         return true;
       }
       new Notification(title,{body,tag,silent});return true;
@@ -296,15 +296,105 @@
     if(document.activeElement?.id!=='designer-multiplier') $('designer-multiplier').value=state.designerPrefs.multiplier;
   }
   function render() {renderDashboard();renderAppointments();renderDesigner();renderHours();renderSales();renderSyncUi();renderV5();}
+
+  // Parse company-formatted appointment cards into the existing small appointment record.
+  // Meeting DATE in the pasted card is deliberately never used as "dateSet".
+  function parseAppointmentCard(raw) {
+    const text=safe(raw).replace(/\r\n?/g,'\n');
+    const readField=(key)=>{const match=text.match(new RegExp('^\\s*'+key+'\\s*:\\s*(.+)$','im'));return match?.[1]?.trim()||'';};
+    const section=(start,end)=>{
+      const lines=text.split('\n').map(line=>line.trim());
+      const index=lines.findIndex(line=>line.toUpperCase()===start);
+      if(index<0)return '';
+      const until=new RegExp('^(?:'+end+')(?:\\s*:|\\s*$)', 'i');
+      const contents=[];
+      for(const line of lines.slice(index+1)){
+        if(until.test(line))break;
+        if(/^━+$/.test(line))continue;
+        contents.push(line);
+      }
+      return contents.join('\n').trim();
+    };
+    // Parse explicit lines first. Don't mistake a street address for an in-person visit
+    // when the customer explicitly said their meeting is Virtual.
+    const type=readField('MEETING TYPE');
+    let meetingType='Phone / video';
+    if(/in[\s-]*person|on[\s-]*site|face[\s-]*to[\s-]*face/i.test(type))meetingType='In person';
+    else if(/virtual|phone|video|zoom|google meet/i.test(type))meetingType='Phone / video';
+    else if(/\b(in person|in-person|on-?site|at (?:their|his|her|the customer'?s) (?:house|home))\b/i.test(text))meetingType='In person';
+    const fullName=readField('NAME');
+    const title=text.split('\n').map(x=>x.trim()).find(x=>/\s+[—–-]\s+/.test(x)&&!/^(?:NAME|LEAD SOURCE)/i.test(x))||'';
+    const headline=title.split(/\s+[—–]\s+/).slice(1).join(' — ').trim();
+    const details=section('PROJECT SPECIFICATIONS','SETTING NOTES|LEAD SOURCE|CUSTOMER DETAILS|SCHEDULE').replace(/\n{3,}/g,'\n\n');
+    const body=[headline,details].join('\n');
+    const types=[['Pavilion',/\bpavilions?\b/i],['Pergola',/\bpergolas?\b/i],['Gazebo',/\bgazebos?\b/i],['Deck',/\bdecks?\b/i],['Timber trusses',/\btrusses?\b|timber\s+truss/i]];
+    const projectType=types.find(([,re])=>re.test(body))?.[0]||'';
+    const leadSource=readField('LEAD SOURCE');
+    const src=leadSource.toLowerCase().replace(/[-_]/g,' ').trim();
+    let source='';
+    if(/home\s*show|trade\s*show|expo/.test(src))source='Home Show';
+    else if(/facebook|fb\b/.test(src))source='Facebook';
+    else if(/instagram|insta\b|ig\b/.test(src))source='Instagram';
+    else if(/website|web\s*site|web\s*form|online/.test(src))source='Website';
+    else if(/call\s*in|phone|telephone|called/.test(src))source='Phone call';
+    else if(/walk\s*in|showroom|store\s*visit/.test(src))source='Walk-in';
+    else if(/referral|referred|recommend/.test(src))source='Referral';
+    else if(leadSource)source='Other';
+    const projectLabel=[fullName,headline||projectType].filter(Boolean).join(' — ').slice(0,150);
+    const notes=details.slice(0,3000);
+    const meetingDate=readField('DATE');
+    const meetingTime=readField('MEETING TIME')||readField('TIME');
+    const findings=[];
+    if(!projectType)findings.push('Project type not recognized — you can choose it manually');
+    if(!leadSource)findings.push('Lead source missing — you can add it manually');
+    if(!fullName)findings.push('Customer name not found');
+    if(!meetingTime)findings.push('Meeting time missing (okay for tracking; check the original card)');
+    return {meetingType,projectType,source,label:projectLabel,notes,meetingDate,meetingTime,sourceRaw:leadSource,customer:fullName,findings};
+  }
+  let entryMode='paste';
+  function setEntryMode(mode){
+    entryMode=mode==='manual'?'manual':'paste';
+    $('quick-card-section').classList.toggle('hidden',entryMode!=='paste');
+    $('manual-entry-section').classList.toggle('hidden',entryMode!=='manual');
+    $('quick-card-set-date').required=entryMode==='paste';
+    for(const name of ['mode-paste','mode-manual']){
+      const active=(name==='mode-paste'&&entryMode==='paste')||(name==='mode-manual'&&entryMode==='manual');
+      $(name).classList.toggle('active',active);$(name).setAttribute('aria-pressed',String(active));
+    }
+  }
+  function previewQuickCard(){
+    const raw=$('quick-card-input').value;
+    if(!raw.trim()){$('quick-card-result').innerHTML='<span class="quick-card-placeholder">Paste a formatted card to preview the information before saving.</span>';return null;}
+    const x=parseAppointmentCard(raw);
+    const sources=[['Meeting',x.meetingType],['Project',x.projectType||'Not specified'],['Source',x.sourceRaw||'Not specified'],['Customer',x.customer||'Not found']];
+    $('quick-card-result').innerHTML='<div class="quick-card-title">✦ Leadline recognized</div><div class="quick-card-tags">'+sources.map(([k,v])=>'<div><small>'+h(k)+'</small><strong>'+h(v)+'</strong></div>').join('')+'</div>'+(x.meetingDate?'<p class="quick-card-meeting">Meeting scheduled for '+h(x.meetingDate)+(x.meetingTime?' at '+h(x.meetingTime):'')+'. This does <b>not</b> change your Date Set.</p>':'')+(x.findings.length?'<div class="quick-card-warnings">'+x.findings.map(a=>'<span>• '+h(a)+'</span>').join('')+'</div>':'')+'<button type="button" id="quick-edit-detected" class="quick-edit-btn">Review or correct details →</button>';
+    return x;
+  }
+  function useQuickCardData(){
+    const parsed=previewQuickCard();if(!parsed)return false;
+    const form=$('appointment-form');
+    form.elements.dateSet.value=$('quick-card-set-date').value;
+    for(const k of ['meetingType','projectType','source','label','notes'])form.elements[k].value=parsed[k]|| (k==='meetingType'?'Phone / video':'');
+    // Some leads use sources not in the predefined list: add a transparent Other label.
+    return true;
+  }
   function newEntry(id) {
     const old=id ? state.records.find(x=>x.id===id&&!x.deleted) : null;
     const form=$('appointment-form');form.reset();form.elements.id.value=old?.id||'';
     for(const key of ['dateSet','meetingType','projectType','source','label','notes']){form.elements[key].value=old?.[key]??(key==='dateSet'?today():key==='meetingType'?TYPES[0]:'');}
     $('dialog-title').textContent=old?'Edit appointment':'Log appointment';$('delete-entry').classList.toggle('hidden',!old);
+    $('quick-card-input').value='';$('quick-card-set-date').value=old?.dateSet||today();
+    previewQuickCard();setEntryMode(old?'manual':'paste');
     $('appointment-dialog').showModal();
   }
   function saveEntry(e) {
-    e.preventDefault();const form=$('appointment-form');if(!form.reportValidity())return;
+    e.preventDefault();const form=$('appointment-form');
+    if(entryMode==='paste'){
+      if(!$('quick-card-input').value.trim()){toast('Paste an appointment card first');$('quick-card-input').focus();return;}
+      if(!$('quick-card-set-date').value){toast('Choose the date you set it');$('quick-card-set-date').focus();return;}
+      if(!useQuickCardData()){toast('Could not read this card');return;}
+    }
+    if(!form.reportValidity())return;
     const data=Object.fromEntries(new FormData(form).entries());const old=state.records.find(x=>x.id===data.id);
     if(!/^\d{4}-\d{2}-\d{2}$/.test(data.dateSet)||!TYPES.includes(data.meetingType)){toast('Check the date and meeting type');return;}
     const ent=normalized({...old,...data,id:old?.id||makeUUID(),createdAt:old?.createdAt||iso(),updatedAt:iso(),deleted:false});
@@ -1135,6 +1225,10 @@
       else if(target.dataset.page)setPage(target.dataset.page);
     });
     document.addEventListener('keydown',e=>{const row=e.target.closest('tr[data-edit],tr[data-hours-edit]');if(row&&(e.key==='Enter'||e.key===' ')){e.preventDefault();row.dataset.hoursEdit?newHourEntry(row.dataset.hoursEdit):newEntry(row.dataset.edit);}});
+    $('mode-paste').addEventListener('click',()=>setEntryMode('paste'));
+    $('mode-manual').addEventListener('click',()=>{if(entryMode==='paste'&&$('quick-card-input').value.trim())useQuickCardData();setEntryMode('manual');});
+    $('quick-card-input').addEventListener('input',previewQuickCard);
+    $('quick-card-result').addEventListener('click',e=>{if(e.target.closest('#quick-edit-detected')){useQuickCardData();setEntryMode('manual');}});
     $('appointment-form').addEventListener('submit',saveEntry);
     $('hours-form').addEventListener('submit',saveHourEntry);$('hours-delete').addEventListener('click',deleteHourEntry);
     ['startedAt','endedAt','breakMinutes'].forEach(k=>$('hours-form').elements[k].addEventListener('input',updateHourPreview));

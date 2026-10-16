@@ -8,22 +8,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Leadline" />
-  <link rel="manifest" href="./manifest.webmanifest?v=5.4.1" />
-  <link rel="icon" href="./icons/icon-192.png" type="image/png" />
-  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-  <link rel="stylesheet" href="./styles.css?v=5.4.1" />
-  <link rel="stylesheet" href="./v4.css?v=5.4.1" />
-  <link rel="stylesheet" href="./v5.css?v=5.4.1" />
-  <link rel="stylesheet" href="./effects.css?v=5.4.1" />
-  <link rel="stylesheet" href="./reference-ui.css?v=5.4.1" />
-  <link rel="stylesheet" href="./mobile-v54.css?v=5.4.1" />
-  <title>Leadline V5.4.1 | Work Tracker</title>
+  <link rel="manifest" href="./manifest.webmanifest?v=5.5-bw" />
+  <link rel="icon" href="./icons/icon-192-bw.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icons/icon-192-bw.png" />
+  <link rel="stylesheet" href="./styles.css?v=5.5" />
+  <link rel="stylesheet" href="./v4.css?v=5.5" />
+  <link rel="stylesheet" href="./v5.css?v=5.5" />
+  <link rel="stylesheet" href="./effects.css?v=5.5" />
+  <link rel="stylesheet" href="./reference-ui.css?v=5.5" />
+  <link rel="stylesheet" href="./mobile-v54.css?v=5.5" />
+  <link rel="stylesheet" href="./mobile-v55.css?v=5.5" />
+  <title>Leadline V5.5 | Work Tracker</title>
 </head>
 <body>
   <div class="shell">
-    <div id="demo-banner" class="demo-banner hidden">✦ V5.4.1 INTERACTIVE PREVIEW · Fictional data · Cloud disabled · Your live records are untouched</div>
+    <div id="demo-banner" class="demo-banner hidden">✦ V5.5 INTERACTIVE PREVIEW · Fictional data · Cloud disabled · Your live records are untouched</div>
     <aside class="sidebar">
-      <div class="brand"><span class="brand-logo">L<span>.</span></span><div><strong>leadline</strong><small>V5.4.1 · PERSONAL WORKSPACE</small></div></div>
+      <div class="brand"><span class="brand-logo">L<span>.</span></span><div><strong>leadline</strong><small>V5.5 · PERSONAL WORKSPACE</small></div></div>
       <div id="sidebar-role" class="sidebar-section">SALES DEVELOPMENT</div>
       <nav class="side-nav" aria-label="Main navigation">
         <button class="nav-link role-sdr active" data-page="dashboard"><span class="nav-emoji">◫</span> Dashboard</button>
@@ -219,7 +220,20 @@
     </section>
   </div>
   <dialog id="appointment-dialog"><div class="dialog-head"><div><div class="eyebrow">APPOINTMENT RECORD</div><h2 id="dialog-title">Log appointment</h2><p>Only records the appointment. Scheduling stays in your company app.</p></div><button type="button" class="icon-close" data-close aria-label="Close">×</button></div>
-    <form id="appointment-form"><input type="hidden" name="id" /><div class="form-grid"><label class="field"><span>Date you set it *</span><input name="dateSet" type="date" required /></label><label class="field"><span>Meeting type *</span><select name="meetingType" required><option>Phone / video</option><option>In person</option></select></label><label class="field"><span>Project type</span><select name="projectType"><option value="">Not specified</option><option>Pergola</option><option>Pavilion</option><option>Gazebo</option><option>Deck</option><option>Timber trusses</option><option>Other</option></select></label><label class="field"><span>Lead source</span><select name="source"><option value="">Not specified</option><option>Website</option><option>Instagram</option><option>Phone call</option><option>Walk-in</option><option>Referral</option><option>Other</option></select></label><label class="field span-two"><span>Project label / name (optional)</span><input name="label" maxlength="150" placeholder="e.g. 20×24 pavilion — Idaho" /></label><label class="field span-two"><span>Notes (optional)</span><textarea name="notes" rows="3" maxlength="3000" placeholder="Anything you'd like to remember. No need to duplicate your company CRM."></textarea></label></div><div class="dialog-footer"><button type="button" id="delete-entry" class="btn btn-danger hidden">Delete</button><div class="footer-spacer"></div><button type="button" class="btn btn-outline" data-close>Cancel</button><button type="submit" class="btn btn-dark">Save appointment</button></div></form>
+    <form id="appointment-form"><input type="hidden" name="id" />
+      <div class="entry-mode-switch" role="group" aria-label="Appointment entry method">
+        <button type="button" class="entry-mode active" id="mode-paste" aria-pressed="true">✦ Paste appointment card</button>
+        <button type="button" class="entry-mode" id="mode-manual" aria-pressed="false">Manual details</button>
+      </div>
+      <div id="quick-card-section" class="quick-card-section">
+        <label class="field"><span>Date you SET this appointment <b class="required-star">*</b></span><input type="date" id="quick-card-set-date" required /><small>This is when you booked it — not the meeting date in the card. Used for your daily graphs.</small></label>
+        <label class="field"><span>Paste the full appointment card</span><textarea id="quick-card-input" rows="9" placeholder="Paste CUSTOMER DETAILS, SCHEDULE, PROJECT SPECIFICATIONS, LEAD SOURCE…
+
+Leadline will recognize the meeting type, project type and source automatically."></textarea></label>
+        <div id="quick-card-result" class="quick-card-result" role="status" aria-live="polite"><span class="quick-card-placeholder">Paste a formatted card to preview the information before saving.</span></div>
+        <div class="quick-card-mini-help">Your copied card stays on this device until you save. Only the appointment summary is saved to Leadline; this doesn't schedule anything.</div>
+      </div>
+      <div id="manual-entry-section"><div class="form-grid"><label class="field"><span>Date you set it *</span><input name="dateSet" type="date" required /></label><label class="field"><span>Meeting type *</span><select name="meetingType" required><option>Phone / video</option><option>In person</option></select></label><label class="field"><span>Project type</span><select name="projectType"><option value="">Not specified</option><option>Pergola</option><option>Pavilion</option><option>Gazebo</option><option>Deck</option><option>Timber trusses</option><option>Other</option></select></label><label class="field"><span>Lead source</span><select name="source"><option value="">Not specified</option><option>Website</option><option>Instagram</option><option>Phone call</option><option>Walk-in</option><option>Referral</option><option>Home Show</option><option>Facebook</option><option>Other</option></select></label><label class="field span-two"><span>Project label / name (optional)</span><input name="label" maxlength="150" placeholder="e.g. 20×24 pavilion — Idaho" /></label><label class="field span-two"><span>Notes (optional)</span><textarea name="notes" rows="3" maxlength="3000" placeholder="Anything you'd like to remember. No need to duplicate your company CRM."></textarea></label></div></div><div class="dialog-footer"><button type="button" id="delete-entry" class="btn btn-danger hidden">Delete</button><div class="footer-spacer"></div><button type="button" class="btn btn-outline" data-close>Cancel</button><button type="submit" class="btn btn-dark">Save appointment</button></div></form>
   </dialog>
   <dialog id="hours-dialog"><div class="dialog-head"><div><div class="eyebrow">DESIGN TIME RECORD</div><h2 id="hours-dialog-title">Add work hours</h2><p>Manual timesheet entry. Breaks are excluded from paid hours.</p></div><button type="button" class="icon-close" data-hours-close aria-label="Close">×</button></div>
     <form id="hours-form"><input type="hidden" name="id" /><div class="form-grid"><label class="field span-two"><span>Project / job label</span><input name="project" maxlength="100" placeholder="e.g. 20×24 pavilion drawing" required /></label><label class="field span-two"><span>Type of work</span><select name="task"><option>3D modeling</option><option>LayOut / drawings</option><option>Revisions</option><option>Project review</option><option>Other</option></select></label><label class="field"><span>Clock in *</span><input name="startedAt" type="datetime-local" required /></label><label class="field"><span>Clock out *</span><input name="endedAt" type="datetime-local" required /></label><label class="field"><span>Unpaid break (minutes)</span><input name="breakMinutes" type="number" min="0" max="1440" step="1" value="0" required /></label><label class="field span-two"><span>Optional notes</span><textarea name="notes" rows="2" maxlength="1000" placeholder="What did you finish?"></textarea></label></div><div id="hours-form-summary" class="timesheet-calculation">Enter a start and end time to calculate paid hours.</div><div class="dialog-footer"><button type="button" id="hours-delete" class="btn btn-danger hidden">Delete</button><div class="footer-spacer"></div><button type="button" class="btn btn-outline" data-hours-close>Cancel</button><button type="submit" class="btn btn-dark">Save time</button></div></form>
@@ -234,10 +248,10 @@
       });
     }
   </script>
-  <script src="./formatter.js?v=5.4.1" defer></script>
-  <script src="./sales.js?v=5.4.1" defer></script>
-  <script src="./app.js?v=5.4.1" defer></script>
-  <script src="./effects.js?v=5.4.1" defer></script>
-  <script src="./mobile-v54.js?v=5.4.1" defer></script>
+  <script src="./formatter.js?v=5.5" defer></script>
+  <script src="./sales.js?v=5.5" defer></script>
+  <script src="./app.js?v=5.5-bw" defer></script>
+  <script src="./effects.js?v=5.5" defer></script>
+  <script src="./mobile-v54.js?v=5.5" defer></script>
 </body>
 </html>
