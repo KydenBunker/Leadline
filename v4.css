@@ -1,0 +1,376 @@
+
+/* Leadline V4 — Obsidian Violet. The legacy V3 layout remains for data compatibility. */
+:root{color-scheme:dark;--bg:var(--tone-0a0811);--surface:var(--tone-151020);--surface2:var(--tone-1b1429);--border:var(--tone-322743);--text:var(--tone-f7f4ff);--muted:var(--tone-aaa0bc);--purple:var(--tone-ac7bff);--violet:var(--tone-8d57f3);--white:#fff; font-family:Inter,'DM Sans',system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:var(--bg)}
+body{background:radial-gradient(circle at 86% 3%,var(--tone-24153780) 0,transparent 36%),var(--bg);color:var(--text)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--tone-b48aff);outline-offset:2px}
+.sidebar{background:linear-gradient(180deg,var(--tone-130d1f),var(--tone-0b0912) 68%);border-right:1px solid var(--tone-2b2040);color:var(--text)}
+.brand-logo,.mini-logo{background:linear-gradient(135deg,var(--tone-9c65ff),var(--tone-4f278e));box-shadow:0 8px 24px var(--tone-6d3bc13d);color:white}
+.brand-logo span,.mini-logo span{color:#fff}
+.brand strong,.mobile-brand strong{color:white}
+.brand small,.sidebar-section,.breadcrumb{color:var(--tone-8d819f)}
+.nav-link{color:var(--tone-ada2c1)}
+.nav-link.active{color:white;background:linear-gradient(90deg,var(--tone-6336a85b),var(--tone-47317052));box-shadow:inset 3px 0 var(--tone-b78bff)}
+.nav-link:hover{color:white;background:var(--tone-241b35)}
+.nav-count{background:var(--tone-36294f);color:var(--tone-e7d6ff)}
+.sidebar-foot{border-color:var(--tone-2e2340);color:var(--tone-9588aa)}
+.dot.is-cloud{background:var(--tone-b597ff);box-shadow:0 0 0 4px var(--tone-a678ef21)}
+.topbar,.role-switcher{background:var(--tone-100c1a);border-color:var(--tone-2d223e)}
+.breadcrumb b{color:var(--tone-e6dffa)}
+.sync-chip{background:var(--tone-211831);color:var(--tone-cba9ff);border:1px solid var(--tone-412d5d)}
+.btn{border-radius:10px;min-height:42px}
+.btn-dark{background:#fff;color:var(--tone-171021);border-color:#fff;box-shadow:0 5px 22px var(--tone-fefaff11)}
+.btn-dark:hover{background:var(--tone-e1d5fa);border-color:var(--tone-e1d5fa)}
+.btn-outline{background:var(--tone-1e172c);color:var(--tone-f1eaff);border-color:var(--tone-3a2b51)}
+.btn-outline:hover{background:var(--tone-2b2040)}
+.btn-light{background:#fff;color:var(--tone-1b112b)}
+.btn-light:hover{background:var(--tone-e7d9ff)}
+.btn-ghost{color:var(--tone-f9f1ff)}
+.btn-danger{background:#351b2a;color:#ffaaaa;border-color:#654052}
+.btn-danger:hover{background:#452039}
+.role-tab{color:var(--tone-b1a6c5)}
+.role-tab.selected{background:var(--tone-2a1b42);color:#fff;border-color:var(--tone-7047af);box-shadow:inset 0 0 0 1px var(--tone-a675ed35)}
+.role-tab:not(.selected):hover{background:var(--tone-21192e);color:#fff}
+.role-icon{color:var(--tone-bb8dff)}
+main{max-width:1550px}
+.layout-heading h1{color:#fff;letter-spacing:-1.6px}
+.layout-heading p,.heading-row p,.panel-title p{color:var(--tone-a79cba);line-height:1.55}
+.eyebrow{color:var(--tone-bc94ff)}
+.eyebrow-line{background:var(--tone-895db4)}
+.mint-dot{color:var(--tone-c28eff)}
+.hero{background:radial-gradient(circle at 80% 20%,var(--tone-7640c47a),transparent 39%),linear-gradient(125deg,var(--tone-311753),var(--tone-1b122e) 70%,var(--tone-100d1b));border:1px solid var(--tone-60408b);box-shadow:0 22px 50px var(--tone-02010740)}
+.hero-kicker{color:var(--tone-dbc1ff)}
+.hero p{color:var(--tone-ccbee2)}
+.orbit{border-color:var(--tone-a77eff3d)}
+.orbit-core{background:linear-gradient(145deg,#fff,var(--tone-c9a3ff));color:var(--tone-2c1745)}
+.orb-label{background:var(--tone-2a1c41);border:1px solid var(--tone-7251a1);color:var(--tone-f8edff)}
+.stat-card,.panel{background:linear-gradient(165deg,var(--tone-191324),var(--tone-130f1e));border:1px solid var(--border);border-radius:16px;box-shadow:0 9px 23px var(--tone-03010624)}
+.stat-card{min-height:160px;position:relative;overflow:hidden}
+.stat-card::after{content:"";position:absolute;right:-46px;top:-48px;width:100px;height:100px;border-radius:50%;background:var(--tone-8844ec0d);pointer-events:none}
+.stat-icon.sage,.stat-icon.orange,.stat-icon.blue,.stat-icon.purple{background:var(--tone-2f2246);color:var(--tone-be94ff)}
+.stat-card small{color:var(--tone-afa4c1)}
+.stat-card strong{color:#fff;font-size:32px}
+.stat-card>span{color:var(--tone-847b95)}
+.heading-row h3,.panel-title h3{color:var(--tone-f9f6ff)}
+.date-label{color:var(--tone-9e91b4)}
+.badge-quiet{background:var(--tone-2b203e);color:var(--tone-cdb5f7);border:1px solid var(--tone-413055)}
+.goal-number strong{color:white}
+.goal-number span{color:var(--tone-a99abc)}
+.goal-track,.source-track{background:var(--tone-322641)}
+.goal-track>span,.source-track>span{background:linear-gradient(90deg,var(--tone-8248ee),var(--tone-c5a1ff))}
+.goal-message{color:var(--tone-b9a6d1)}
+.text-button{color:var(--tone-c8a5ff)}
+.source-row>div:first-child,.recent-copy small{color:var(--tone-afa2c3)}
+.source-row b,.recent-copy b{color:var(--tone-f4edff)}
+.recent-item{border-color:var(--tone-30263f);color:#fff}
+.recent-avatar{background:var(--tone-352250);color:var(--tone-e0c8ff)}
+.recent-chevron{color:var(--tone-a99abc)}
+.quiet-empty{color:var(--tone-9588a8)}
+.mini-metrics span{color:var(--tone-a79abc);background:var(--tone-1a1425);border:1px solid var(--tone-342843)}
+.mini-metrics b{color:#fff}
+.log-toolbar{border-color:var(--tone-332643)}
+.search{background:var(--tone-100c1b);border-color:var(--tone-413254)}
+.search input{color:var(--tone-f6f2ff)}
+.search>span{color:var(--tone-a88fbf)}
+.log-toolbar select{background:var(--tone-1d162b);color:var(--tone-d9caec);border:1px solid var(--tone-413254)}
+.result-label{color:var(--tone-9d8cb6)}
+.entry-table th{background:var(--tone-221a30);color:var(--tone-ac99c8)}
+.entry-table td{color:var(--tone-c5b8d8);border-color:var(--tone-322643)}
+.entry-table tr[data-edit]:hover,.entry-table tr[data-hours-edit]:hover{background:var(--tone-241935)}
+.entry-table b{color:#fff}
+.entry-table small{color:var(--tone-9e90b1)}
+.type-pill{background:var(--tone-34234e);color:var(--tone-d7bbff)}
+.chevron{color:var(--tone-a698be)!important}
+.empty-icon{background:var(--tone-36234c);color:var(--tone-d2b2ff)}
+.empty p{color:var(--tone-a192b5)}
+.field>span{color:var(--tone-b9aacd)}
+.field input,.field select,.field textarea{background:var(--tone-100c1a);color:var(--tone-f2ecff);border:1px solid var(--tone-453453);border-radius:10px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--tone-b189ff)}
+.field input::placeholder,.field textarea::placeholder{color:var(--tone-766b88)}
+.field option{background:var(--tone-130d20);color:var(--tone-f2edff)}
+.small-muted{color:var(--tone-a496b9)}
+.privacy-banner{background:var(--tone-1c1829);color:var(--tone-c9b7dc);border:1px solid var(--tone-3c3052)}
+.settings-panel>p,.help{color:var(--tone-a99abd)!important}
+.divider{background:var(--tone-302440)}
+.signed-in{background:var(--tone-211735);border:1px solid var(--tone-49305f)}
+.signed-in p{color:var(--tone-ead7ff)}
+.danger-zone{background:var(--tone-181121);border-color:#513145}
+.danger-zone p{color:#af94a7}
+code{background:var(--tone-312143);color:var(--tone-e3beff)}
+dialog{background:var(--tone-171121);color:white;border:1px solid var(--tone-563b73);box-shadow:0 35px 105px #000a}
+dialog::backdrop{background:var(--tone-07050bd9)}
+.dialog-head,#hours-dialog .dialog-head{border-color:var(--tone-382a47)}
+.dialog-head p{color:var(--tone-a99aba)}
+.icon-close{background:var(--tone-31223e);color:var(--tone-d9bee9)}
+.toast{background:var(--tone-ebe0ff);color:var(--tone-1c102d);box-shadow:0 10px 50px var(--tone-0a0611a0)}
+.timer-card{background:radial-gradient(circle at 82% -10%,var(--tone-925ae366),transparent 48%),linear-gradient(120deg,var(--tone-312052),var(--tone-171021));border:1px solid var(--tone-684794);box-shadow:0 16px 36px var(--tone-06000d6b)}
+.timer-head p,.timer-break-label,.timer-face small{color:var(--tone-c7b6e1)}
+.timer-kicker{color:var(--tone-d9b5ff)}
+.timer-status-dot.active{background:var(--tone-c9a1ff);box-shadow:0 0 0 5px var(--tone-9e62ef28)}
+.timer-fields .field span{color:var(--tone-d0bee6)}
+.timer-fields input,.timer-fields select{background:var(--tone-170f25)!important;color:#fff!important;border-color:var(--tone-74569c)!important}
+.btn-timer-start{background:#fff;color:var(--tone-28163c);border-color:white}
+.btn-timer-start:hover{background:var(--tone-e6d5ff)}
+.btn-timer-pause{background:var(--tone-c0a3ed);color:var(--tone-28153e)}
+.btn-timer-stop{background:var(--tone-39234d);color:var(--tone-f5e8ff);border:1px solid var(--tone-a779db)}
+.designer-summary>div{border-color:var(--tone-332741)}
+.designer-summary span{color:var(--tone-aea0c0)}
+.designer-summary b{color:#fff}
+.recent-hours{color:var(--tone-d2adff)}
+.timesheet-calculation{background:var(--tone-2a1b40);color:var(--tone-e0c4ff);border:1px solid var(--tone-5a3b81)}
+.sync-message[data-level=ok]{color:var(--tone-c8b0ff)!important}
+.sync-message[data-level=error]{color:#ffb0c4!important}
+/* Interactive daily line graphs */
+.chart-toolbar{display:flex;gap:5px;margin:12px 0 7px;background:var(--tone-100c1b);border:1px solid var(--tone-342747);border-radius:10px;padding:5px;max-width:max-content}
+.chart-toolbar button{background:none;color:var(--tone-9584af);border:0;border-radius:7px;padding:7px 12px;font-size:11px;font-weight:800;line-height:1}
+.chart-toolbar button.selected{background:var(--tone-5b328d);color:#fff;box-shadow:0 2px 8px var(--tone-100923)}
+.chart-toolbar button:hover:not(.selected){color:white;background:var(--tone-251936)}
+.trend-chart{width:100%;height:242px;min-width:0}
+.trend-svg{width:100%;height:100%;display:block;overflow:visible;touch-action:pan-y}
+.trend-svg .grid-line{stroke:var(--tone-3d304e);stroke-width:.9;stroke-dasharray:3 5}
+.trend-svg .axis-tick{font:11px system-ui,sans-serif;fill:var(--tone-9184a8)}
+.trend-svg .trend-line{fill:none;stroke:var(--tone-ae82ff);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 7px var(--tone-9859ff77))}
+.trend-svg .chart-point{fill:var(--tone-c9a7ff);stroke:var(--tone-1b1129);stroke-width:1}
+.trend-svg .chart-point.picked{fill:white;stroke:var(--tone-af7fff);stroke-width:2}
+.trend-svg .selected-line{stroke:var(--tone-a579db);stroke-dasharray:3 4;stroke-width:1.1}
+.trend-svg rect[data-trend-day]{cursor:crosshair}
+.chart-detail{border-top:1px solid var(--tone-302442);padding-top:13px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--tone-c4b4d8)}
+.chart-detail b{color:var(--tone-f4edff);font-size:12px}
+.chart-detail span{background:var(--tone-392451);border:1px solid var(--tone-634490);border-radius:8px;padding:5px 10px;color:white;font-weight:800}
+.chart-detail small{color:var(--tone-9586a9)}
+/* Smart formatter */
+.formatter-insights{margin:0 0 18px}
+.insight-content{display:grid;gap:11px}
+.insight-count{font-size:12px;color:var(--tone-c1a4ee);font-weight:750}
+.insight-tags{display:flex;flex-wrap:wrap;gap:8px}
+.insight-pill{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--tone-ece3ff);background:var(--tone-2e203e);padding:7px 9px;border-radius:9px;border:1px solid var(--tone-49345e);max-width:100%;overflow-wrap:anywhere}
+.insight-pill b{color:var(--tone-b691f3);text-transform:capitalize}
+.insight-content h4{font-size:12px;color:var(--tone-e8d8ff);margin:5px 0 0}
+.insight-content ul{margin:0;padding-left:20px;font-size:12px;color:var(--tone-c9bdd9);line-height:1.8}
+/* Safety and clarity for preview mode */
+.demo-banner{position:sticky;top:0;z-index:95;background:var(--tone-c49cff);color:var(--tone-160924);padding:11px 20px;font-size:11px;font-weight:800;text-align:center;letter-spacing:.2px;grid-column:1 / -1;width:100%}
+.is-demo .sidebar{top:35px}
+.is-demo .topbar{position:relative}
+.is-demo .shell{padding-top:35px}
+.is-demo .demo-banner{position:fixed;left:0;top:0}
+@media(max-width:840px){.mobile-nav{background:var(--tone-120d1d);border-color:var(--tone-352649);box-shadow:0 -8px 32px var(--tone-05030a99)}.mobile-nav button{color:var(--tone-9787ae)}.mobile-nav button.active{background:var(--tone-38264f);color:white}.topbar{background:var(--tone-130e1d)}.role-switcher{background:var(--tone-100c1a)}.is-demo .mobile-nav{bottom:0}.trend-chart{height:235px}}
+@media(max-width:520px){.panel{padding:17px}.log-panel{padding:0}.trend-chart{height:212px}.chart-toolbar button{padding:8px 12px}.hero-deco{opacity:.24}.hero{margin-bottom:27px}.stat-card strong{font-size:28px}.stat-card{min-height:141px}.role-tab.selected{background:var(--tone-2b1941)}.chart-detail small{flex-basis:100%}.is-demo .shell{padding-top:49px}.is-demo .sidebar{top:49px}.demo-banner{font-size:10px;padding:9px 10px}}
+
+@media(max-width:520px){.hero{min-height:270px}.hero-content{width:100%;padding-bottom:23px}.hero-buttons{display:flex;align-items:flex-start;flex-direction:column;gap:8px}.hero .btn-ghost{padding:10px 2px}.hero p{max-width:270px}.hero-deco{opacity:.10}}
+
+.formatter-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 14px}.formatter-options input,.formatter-options select{width:100%;max-width:100%}@media(max-width:800px){.formatter-options{grid-template-columns:1fr}}
+
+/* V4.3 routing rules / card readiness */
+.routing-options{border:1px solid var(--tone-6b5686);border-radius:14px;margin:0 0 15px;background:var(--tone-191025);color:var(--tone-f4edfc);padding:13px 15px}
+.routing-options summary{display:flex;justify-content:space-between;cursor:pointer;font-weight:750;letter-spacing:.01em;align-items:center}
+.routing-explainer{color:var(--tone-bcb0cc);font-size:13px;line-height:1.5;margin:12px 0}
+.routing-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.routing-grid .route-full{grid-column:1/-1}
+.routing-grid .field{min-width:0}.routing-grid input,.routing-grid select{width:100%;max-width:100%}
+.route-confirm{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--tone-d9c7f4);line-height:1.5}
+.route-confirm input{width:16px!important;max-width:16px!important;flex:none;margin-top:2px;accent-color:var(--tone-b181ff)}
+.validation-card{border-radius:12px;border:1px solid var(--tone-4d4064);padding:12px 14px;margin:0 0 14px;font-size:13px;line-height:1.55}
+.validation-ready{background:#163224;color:#c7f9d5;border-color:#3e7058}
+.validation-blocked{background:#341d2c;color:#ffe1ec;border-color:#a6527d}
+.validation-wait{background:var(--tone-251a36);color:var(--tone-eadbfc)}
+.validation-card strong{display:block;margin-bottom:4px;font-size:14px}.validation-card ul{margin:6px 0 0;padding-left:18px}.validation-card li{margin:2px 0}
+.insight-section-title{font-size:12px;margin-top:14px;margin-bottom:4px;font-weight:750;color:var(--tone-e8dcfa)}
+@media(max-width:660px){.routing-grid{grid-template-columns:1fr}.routing-grid .route-full{grid-column:auto}.formatter-actions{flex-wrap:wrap}}
+
+.guide-reference{margin:0 0 18px;padding:16px 18px}.guide-reference summary{cursor:pointer;font-weight:800;color:var(--tone-e8dcff);display:flex;justify-content:space-between}.guide-inner p{color:var(--tone-c9bada);font-size:13px;line-height:1.65;margin:12px 0}.guide-inner code{background:var(--tone-312249);color:var(--tone-e7d6ff);padding:2px 5px;border-radius:5px}.guide-inner a{color:var(--tone-c5a1ff);text-decoration:underline}
+
+.zone-summary{border:1px solid var(--tone-8551ce);background:rgba(95,51,165,.18);border-radius:14px;padding:14px;margin:14px 0;display:grid;gap:5px;color:var(--tone-efe6ff)}.zone-summary b{font-size:1rem}.zone-summary span{font-size:.94rem}.zone-summary small{font-size:.8rem;color:var(--tone-b7a4d7)}
+
+/* Quick company availability access */
+.open-times-quick{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap;padding:0 15px;line-height:1.25}
+.hero-buttons{flex-wrap:wrap;gap:10px}
+.hero .open-times-quick{color:var(--tone-f5e8ff);background:var(--tone-321e50);border-color:var(--tone-9970d0)}
+.hero .open-times-quick:hover{background:var(--tone-432968)}
+.open-times-standalone{margin-top:14px}
+@media(max-width:640px){.hero-buttons .open-times-quick{width:100%;min-height:44px}.open-times-standalone .open-times-quick{width:100%}}
+
+/* V4.6 appearance choices — workspaces share a single theme */
+:root{--accent:#ad7bff;--accent-strong:#8f5bea;--accent-soft:#302145;--accent-pale:#d4baff}
+:root[data-accent=blue]{--accent:#71a9ff;--accent-strong:#367be6;--accent-soft:#162d50;--accent-pale:#b2d5ff}
+:root[data-accent=green]{--accent:#65d1a0;--accent-strong:#279b70;--accent-soft:#123a2e;--accent-pale:#baf5d6}
+:root[data-accent=red]{--accent:#ff8296;--accent-strong:#e94a67;--accent-soft:#49212e;--accent-pale:#ffc4cf}
+:root[data-accent=gold]{--accent:#f2ba5e;--accent-strong:#d49638;--accent-soft:#473319;--accent-pale:#ffdf9d}
+:root[data-theme=dark]{color-scheme:dark}
+:root[data-theme=light]{color-scheme:light;--bg:var(--tone-f7f5fc);--surface:#ffffff;--surface2:var(--tone-f2edfb);--border:var(--tone-ded6e8);--text:var(--tone-252034);--muted:var(--tone-675d76)}
+:root[data-theme=light] body{background:linear-gradient(160deg,var(--tone-fcfbff),var(--tone-f3f0f9));color:var(--tone-292334)}
+/* Accent should affect navigation, chart lines, active buttons and highlights, without changing the layout. */
+.nav-link.active{background:var(--accent-soft);box-shadow:inset 3px 0 var(--accent)}
+.nav-count,.stat-icon.sage,.stat-icon.orange,.stat-icon.blue,.stat-icon.purple{background:var(--accent-soft);color:var(--accent-pale)}
+.role-tab.selected{border-color:var(--accent-strong);background:var(--accent-soft)}
+.role-icon,.eyebrow,.mint-dot,.recent-hours,.text-button,.insight-pill b,.zone-summary b{color:var(--accent)}
+.brand-logo,.mini-logo{background:linear-gradient(145deg,var(--accent),var(--accent-strong))}
+.goal-track>span,.source-track>span{background:linear-gradient(90deg,var(--accent-strong),var(--accent-pale))}
+.chart-toolbar button.selected{background:var(--accent-strong)}
+.trend-svg .trend-line{stroke:var(--accent);filter:none}
+.trend-svg .chart-point{fill:var(--accent-pale)}
+.trend-svg .chart-point.picked{stroke:var(--accent);fill:#fff}
+.chart-detail span{background:var(--accent-soft);border-color:var(--accent-strong)}
+.validation-wait,.routing-options,.zone-summary{border-color:var(--accent-strong)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:var(--accent)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent-strong)}
+.hero{border-color:var(--accent-strong);background:radial-gradient(circle at 75% 12%,var(--accent-soft),transparent 47%),linear-gradient(125deg,var(--tone-20172f),var(--tone-110d1c))}
+.role-tab.selected,.goal-number strong{color:var(--text)}
+/* Light palette: preserve all card spacing and typography. */
+:root[data-theme=light] .sidebar{background:var(--tone-f5f0ff);color:var(--tone-30283f);border-right-color:var(--tone-ddd2ee)}
+:root[data-theme=light] .brand strong,:root[data-theme=light] .mobile-brand strong,:root[data-theme=light] .layout-heading h1{color:var(--tone-20182f)}
+:root[data-theme=light] .sidebar-section,:root[data-theme=light] .breadcrumb,:root[data-theme=light] .brand small{color:var(--tone-766a89)}
+:root[data-theme=light] .nav-link{color:var(--tone-574e69)}
+:root[data-theme=light] .nav-link.active{color:var(--tone-291b3c);background:color-mix(in srgb,var(--accent) 18%,white)}
+:root[data-theme=light] .nav-link:hover{background:var(--tone-eee6fa);color:var(--tone-30213c)}
+:root[data-theme=light] .topbar,:root[data-theme=light] .role-switcher,:root[data-theme=light] .mobile-nav{background:#fff;border-color:var(--tone-e4ddeb)}
+:root[data-theme=light] .breadcrumb b,:root[data-theme=light] .role-tab.selected,:root[data-theme=light] .role-tab:not(.selected):hover{color:var(--tone-322642)}
+:root[data-theme=light] .role-tab{color:var(--tone-776a88)}
+:root[data-theme=light] .role-tab.selected{background:color-mix(in srgb,var(--accent) 17%,white)}
+:root[data-theme=light] .role-tab:not(.selected):hover{background:var(--tone-f4eff8)}
+:root[data-theme=light] .sync-chip,:root[data-theme=light] .badge-quiet,:root[data-theme=light] .nav-count,:root[data-theme=light] .mini-metrics span{color:var(--tone-4e3865);background:var(--tone-f0e9fa);border-color:var(--tone-e2d6ed)}
+:root[data-theme=light] .stat-card,:root[data-theme=light] .panel{background:#fff;border-color:var(--tone-e3ddeb);box-shadow:0 8px 24px var(--tone-20102b0a)}
+:root[data-theme=light] .stat-card strong,:root[data-theme=light] .heading-row h3,:root[data-theme=light] .panel-title h3,:root[data-theme=light] .goal-number strong,:root[data-theme=light] .recent-copy b,:root[data-theme=light] .entry-table b,:root[data-theme=light] .source-row b,:root[data-theme=light] .mini-metrics b{color:var(--tone-281f37)}
+:root[data-theme=light] .stat-card small,:root[data-theme=light] .stat-card>span,:root[data-theme=light] .heading-row p,:root[data-theme=light] .panel-title p,:root[data-theme=light] .layout-heading p,:root[data-theme=light] .source-row>div:first-child,:root[data-theme=light] .recent-copy small,:root[data-theme=light] .date-label,:root[data-theme=light] .goal-message,:root[data-theme=light] .chart-detail,:root[data-theme=light] .help,:root[data-theme=light] .settings-panel>p{color:var(--tone-6f637e)!important}
+:root[data-theme=light] .field>span{color:var(--tone-514663)}
+:root[data-theme=light] .field input,:root[data-theme=light] .field select,:root[data-theme=light] .field textarea,:root[data-theme=light] .search,:root[data-theme=light] .log-toolbar select{background:#fff;color:var(--tone-31263d);border-color:var(--tone-d9cfe5)}
+:root[data-theme=light] .search input{color:var(--tone-2b2436)}
+:root[data-theme=light] .field input::placeholder,:root[data-theme=light] .field textarea::placeholder{color:var(--tone-9c90aa)}
+:root[data-theme=light] .field option{background:#fff;color:var(--tone-272035)}
+:root[data-theme=light] .entry-table th{background:var(--tone-f4f0fa);color:var(--tone-655677)}
+:root[data-theme=light] .entry-table td{color:var(--tone-453b55);border-color:var(--tone-e6deec)}
+:root[data-theme=light] .entry-table tr[data-edit]:hover,:root[data-theme=light] .entry-table tr[data-hours-edit]:hover{background:var(--tone-f7f0ff)}
+:root[data-theme=light] .btn-outline{background:#fff;color:var(--tone-443255);border-color:var(--tone-d3c5e3)}
+:root[data-theme=light] .btn-dark{background:var(--tone-2a1e36);color:#fff;border-color:var(--tone-2a1e36)}
+:root[data-theme=light] .btn-dark:hover{background:var(--tone-49335d)}
+:root[data-theme=light] .divider{background:var(--tone-e5deee)}
+:root[data-theme=light] .hero{background:linear-gradient(125deg,color-mix(in srgb,var(--accent) 24%,#fff),var(--tone-e9e1f4));color:var(--tone-2b2236);border-color:var(--tone-e0d0f0)}
+:root[data-theme=light] .hero h2,:root[data-theme=light] .hero .hero-kicker,:root[data-theme=light] .hero p{color:var(--tone-30243f)}
+:root[data-theme=light] .hero .btn-ghost{color:var(--tone-392951)}
+:root[data-theme=light] .hero .open-times-quick{background:#fff;color:var(--tone-3c2d4e);border-color:var(--tone-dbc9e9)}
+:root[data-theme=light] .role-switcher,:root[data-theme=light] .topbar{color:var(--tone-2a2237)}
+:root[data-theme=light] .source-track,:root[data-theme=light] .goal-track{background:var(--tone-eee6f3)}
+:root[data-theme=light] .chart-toolbar{background:var(--tone-f5f0fa);border-color:var(--tone-e8ddf0)}
+:root[data-theme=light] .chart-toolbar button:not(.selected){color:var(--tone-685c79)}
+:root[data-theme=light] .chart-toolbar button.selected{color:#fff}
+:root[data-theme=light] .chart-detail{border-color:var(--tone-e8dff0)}
+:root[data-theme=light] .chart-detail b{color:var(--tone-31223f)}
+:root[data-theme=light] .trend-svg .grid-line{stroke:var(--tone-e7deee)}
+:root[data-theme=light] .trend-svg .axis-tick{fill:var(--tone-786a88)}
+:root[data-theme=light] .routing-options,:root[data-theme=light] .privacy-banner,:root[data-theme=light] .guide-reference{background:var(--tone-fcfaff);color:var(--tone-2f2639)}
+:root[data-theme=light] .routing-explainer,:root[data-theme=light] .guide-inner p{color:var(--tone-685b77)}
+:root[data-theme=light] .guide-reference summary{color:var(--tone-3e3150)}
+:root[data-theme=light] .insight-count,:root[data-theme=light] .insight-section-title{color:var(--tone-604976)}
+:root[data-theme=light] .insight-pill{background:var(--tone-f5effb);color:var(--tone-382842);border-color:var(--tone-e5d5f0)}
+:root[data-theme=light] .zone-summary{background:var(--tone-faf6ff);color:var(--tone-3f3151)}
+:root[data-theme=light] .zone-summary small{color:var(--tone-746384)}
+:root[data-theme=light] .validation-wait{background:var(--tone-f4edfa);color:var(--tone-4c3565)}
+:root[data-theme=light] .validation-ready{background:#e9f7eb;color:#194a2a}
+:root[data-theme=light] .validation-blocked{background:#fff0f4;color:#71344a}
+:root[data-theme=light] .recent-item{color:var(--tone-30213e);border-color:var(--tone-eee5f4)}
+:root[data-theme=light] .recent-avatar{background:var(--tone-efe2ff);color:var(--tone-513176)}
+:root[data-theme=light] .type-pill{background:var(--tone-efe3fd);color:var(--tone-533e75)}
+:root[data-theme=light] .sidebar-foot{border-color:var(--tone-e3d8eb);color:var(--tone-6e6279)}
+:root[data-theme=light] .timer-card{background:linear-gradient(125deg,var(--tone-efe6ff),var(--tone-f8f5fc));color:var(--tone-2f203b);border-color:var(--tone-dbc5ef)}
+:root[data-theme=light] .timer-face strong,:root[data-theme=light] .timer-head h3{color:var(--tone-2c213a)}
+:root[data-theme=light] .timer-head p,:root[data-theme=light] .timer-kicker,:root[data-theme=light] .timer-face small,:root[data-theme=light] .timer-break-label{color:var(--tone-6f5e85)}
+:root[data-theme=light] .timer-fields input,:root[data-theme=light] .timer-fields select{background:#fff!important;color:var(--tone-30223e)!important;border-color:var(--tone-d2c3e4)!important}
+:root[data-theme=light] dialog{background:#fff;color:var(--tone-2b2534);border-color:var(--tone-dfd4e8)}
+:root[data-theme=light] .dialog-head p{color:var(--tone-746682)}
+:root[data-theme=light] .timesheet-calculation,:root[data-theme=light] .signed-in{background:var(--tone-f4edfa);color:var(--tone-403254);border-color:var(--tone-decfed)}
+:root[data-theme=light] .signed-in p{color:var(--tone-392a4b)}
+:root[data-theme=light] .danger-zone{background:#fff7f9;border-color:#ead7e0}
+:root[data-theme=light] .toast{background:var(--tone-251d30);color:#fff}
+@media(max-width:840px){:root[data-theme=light] .mobile-nav button{color:var(--tone-756b83)}:root[data-theme=light] .mobile-nav button.active{background:var(--tone-eae0f7);color:var(--tone-33223e)}}
+
+/* Sales performance */
+.wins-teaser{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin:14px 0 25px}
+.wins-teaser>div:first-child{flex:2;min-width:210px}.wins-teaser p{margin:5px 0;color:var(--muted);font-size:13px}.wins-teaser-kpis{display:flex;gap:18px;flex:1;min-width:170px}.wins-teaser-kpis div{display:grid;gap:4px}.wins-teaser-kpis small{font-size:11px;color:var(--muted)}.wins-teaser-kpis b{font-size:22px;color:var(--text)}
+.sales-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:15px 0 24px}
+.sales-kpis .stat-card{display:grid;gap:8px;min-height:140px}.sales-kpis .stat-card strong{font-size:clamp(1.4rem,3vw,2.1rem)}
+.sales-trend-panel{margin-bottom:22px}
+.sales-panels .panel{min-width:0}.sales-entry-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.sales-entry-fields .span-two{grid-column:1/-1}
+.sales-entry-fields input,.sales-entry-fields select{width:100%}
+.sales-button-row{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0}
+.wins-queue{max-height:720px;overflow:auto;display:grid;gap:10px}
+.win-item{padding:14px;border:1px solid var(--border);border-radius:12px;display:grid;gap:10px;background:var(--surface2)}
+.win-heading{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.win-heading strong{display:block;font-size:14px;color:var(--text)}
+.win-heading small{display:block;font-size:12px;margin-top:4px;color:var(--muted)}
+.win-heading b{font-size:15px;white-space:nowrap;color:var(--text)}
+.win-status{border-radius:7px;padding:5px 8px;font-size:11px;max-width:max-content;font-weight:750}
+.win-matched{background:#1c4c36;color:#c9f7d8}.win-unmatched{background:#48301c;color:#ffdf9a}
+.win-actions{display:flex;align-items:center;gap:7px}.win-actions select{flex:1;min-width:0;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:8px;font-size:12px}
+.win-actions .btn{min-height:37px;padding:7px 10px;font-size:11px}.small-delete{color:#ec879c;background:transparent;border:0;font-size:23px;min-width:26px}
+.appearance-settings{display:grid;grid-template-columns:130px 1fr;gap:17px;align-items:start}
+.color-options{display:flex;flex-wrap:wrap;gap:9px;padding-top:8px}
+.accent-swatch{--swatch:#ad7bff;width:35px;height:35px;border-radius:50%;border:3px solid transparent;background:var(--swatch);box-shadow:0 0 0 1px #7777;position:relative}
+.accent-swatch[data-accent=blue]{--swatch:#71a9ff}.accent-swatch[data-accent=green]{--swatch:#65d1a0}.accent-swatch[data-accent=red]{--swatch:#ff8296}.accent-swatch[data-accent=gold]{--swatch:#f2ba5e}
+.accent-swatch.selected{outline:2px solid var(--text);outline-offset:3px}
+@media(max-width:1100px){.sales-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.wins-teaser{align-items:stretch}.wins-teaser-kpis{width:100%}.sales-kpis{gap:9px}.sales-entry-fields{grid-template-columns:1fr}.sales-entry-fields .span-two{grid-column:1}.win-actions{flex-wrap:wrap}.win-actions select{flex-basis:100%}.appearance-settings{grid-template-columns:1fr}.sales-kpis .stat-card{min-height:122px}}
+
+/* V4.7: complete accent palette; all previous lavender/purple tones follow selected color. */
+:root{--tone-0a0811:#0a0811;--tone-151020:#151020;--tone-1b1429:#1b1429;--tone-322743:#322743;--tone-f7f4ff:#f7f4ff;--tone-aaa0bc:#aaa0bc;--tone-ac7bff:#ac7bff;--tone-8d57f3:#8d57f3;--tone-24153780:#24153780;--tone-b48aff:#b48aff;--tone-130d1f:#130d1f;--tone-0b0912:#0b0912;--tone-2b2040:#2b2040;--tone-9c65ff:#9c65ff;--tone-4f278e:#4f278e;--tone-6d3bc13d:#6d3bc13d;--tone-8d819f:#8d819f;--tone-ada2c1:#ada2c1;--tone-6336a85b:#6336a85b;--tone-47317052:#47317052;--tone-b78bff:#b78bff;--tone-241b35:#241b35;--tone-36294f:#36294f;--tone-e7d6ff:#e7d6ff;--tone-2e2340:#2e2340;--tone-9588aa:#9588aa;--tone-b597ff:#b597ff;--tone-a678ef21:#a678ef21;--tone-100c1a:#100c1a;--tone-2d223e:#2d223e;--tone-e6dffa:#e6dffa;--tone-211831:#211831;--tone-cba9ff:#cba9ff;--tone-412d5d:#412d5d;--tone-171021:#171021;--tone-fefaff11:#fefaff11;--tone-e1d5fa:#e1d5fa;--tone-1e172c:#1e172c;--tone-f1eaff:#f1eaff;--tone-3a2b51:#3a2b51;--tone-1b112b:#1b112b;--tone-e7d9ff:#e7d9ff;--tone-f9f1ff:#f9f1ff;--tone-b1a6c5:#b1a6c5;--tone-2a1b42:#2a1b42;--tone-7047af:#7047af;--tone-a675ed35:#a675ed35;--tone-21192e:#21192e;--tone-bb8dff:#bb8dff;--tone-a79cba:#a79cba;--tone-bc94ff:#bc94ff;--tone-895db4:#895db4;--tone-c28eff:#c28eff;--tone-7640c47a:#7640c47a;--tone-311753:#311753;--tone-1b122e:#1b122e;--tone-100d1b:#100d1b;--tone-60408b:#60408b;--tone-02010740:#02010740;--tone-dbc1ff:#dbc1ff;--tone-ccbee2:#ccbee2;--tone-a77eff3d:#a77eff3d;--tone-c9a3ff:#c9a3ff;--tone-2c1745:#2c1745;--tone-2a1c41:#2a1c41;--tone-7251a1:#7251a1;--tone-f8edff:#f8edff;--tone-191324:#191324;--tone-130f1e:#130f1e;--tone-03010624:#03010624;--tone-8844ec0d:#8844ec0d;--tone-2f2246:#2f2246;--tone-be94ff:#be94ff;--tone-afa4c1:#afa4c1;--tone-847b95:#847b95;--tone-f9f6ff:#f9f6ff;--tone-9e91b4:#9e91b4;--tone-2b203e:#2b203e;--tone-cdb5f7:#cdb5f7;--tone-413055:#413055;--tone-a99abc:#a99abc;--tone-322641:#322641;--tone-8248ee:#8248ee;--tone-c5a1ff:#c5a1ff;--tone-b9a6d1:#b9a6d1;--tone-c8a5ff:#c8a5ff;--tone-afa2c3:#afa2c3;--tone-f4edff:#f4edff;--tone-30263f:#30263f;--tone-352250:#352250;--tone-e0c8ff:#e0c8ff;--tone-9588a8:#9588a8;--tone-a79abc:#a79abc;--tone-1a1425:#1a1425;--tone-342843:#342843;--tone-332643:#332643;--tone-100c1b:#100c1b;--tone-413254:#413254;--tone-f6f2ff:#f6f2ff;--tone-a88fbf:#a88fbf;--tone-1d162b:#1d162b;--tone-d9caec:#d9caec;--tone-9d8cb6:#9d8cb6;--tone-221a30:#221a30;--tone-ac99c8:#ac99c8;--tone-c5b8d8:#c5b8d8;--tone-322643:#322643;--tone-241935:#241935;--tone-9e90b1:#9e90b1;--tone-34234e:#34234e;--tone-d7bbff:#d7bbff;--tone-a698be:#a698be;--tone-36234c:#36234c;--tone-d2b2ff:#d2b2ff;--tone-a192b5:#a192b5;--tone-b9aacd:#b9aacd;--tone-f2ecff:#f2ecff;--tone-453453:#453453;--tone-b189ff:#b189ff;--tone-766b88:#766b88;--tone-130d20:#130d20;--tone-f2edff:#f2edff;--tone-a496b9:#a496b9;--tone-1c1829:#1c1829;--tone-c9b7dc:#c9b7dc;--tone-3c3052:#3c3052;--tone-a99abd:#a99abd;--tone-302440:#302440;--tone-211735:#211735;--tone-49305f:#49305f;--tone-ead7ff:#ead7ff;--tone-181121:#181121;--tone-312143:#312143;--tone-e3beff:#e3beff;--tone-171121:#171121;--tone-563b73:#563b73;--tone-07050bd9:#07050bd9;--tone-382a47:#382a47;--tone-a99aba:#a99aba;--tone-31223e:#31223e;--tone-d9bee9:#d9bee9;--tone-ebe0ff:#ebe0ff;--tone-1c102d:#1c102d;--tone-0a0611a0:#0a0611a0;--tone-925ae366:#925ae366;--tone-312052:#312052;--tone-684794:#684794;--tone-06000d6b:#06000d6b;--tone-c7b6e1:#c7b6e1;--tone-d9b5ff:#d9b5ff;--tone-c9a1ff:#c9a1ff;--tone-9e62ef28:#9e62ef28;--tone-d0bee6:#d0bee6;--tone-170f25:#170f25;--tone-74569c:#74569c;--tone-28163c:#28163c;--tone-e6d5ff:#e6d5ff;--tone-c0a3ed:#c0a3ed;--tone-28153e:#28153e;--tone-39234d:#39234d;--tone-f5e8ff:#f5e8ff;--tone-a779db:#a779db;--tone-332741:#332741;--tone-aea0c0:#aea0c0;--tone-d2adff:#d2adff;--tone-2a1b40:#2a1b40;--tone-e0c4ff:#e0c4ff;--tone-5a3b81:#5a3b81;--tone-c8b0ff:#c8b0ff;--tone-342747:#342747;--tone-9584af:#9584af;--tone-5b328d:#5b328d;--tone-100923:#100923;--tone-251936:#251936;--tone-3d304e:#3d304e;--tone-9184a8:#9184a8;--tone-ae82ff:#ae82ff;--tone-9859ff77:#9859ff77;--tone-c9a7ff:#c9a7ff;--tone-1b1129:#1b1129;--tone-af7fff:#af7fff;--tone-a579db:#a579db;--tone-302442:#302442;--tone-c4b4d8:#c4b4d8;--tone-392451:#392451;--tone-634490:#634490;--tone-9586a9:#9586a9;--tone-c1a4ee:#c1a4ee;--tone-ece3ff:#ece3ff;--tone-2e203e:#2e203e;--tone-49345e:#49345e;--tone-b691f3:#b691f3;--tone-e8d8ff:#e8d8ff;--tone-c9bdd9:#c9bdd9;--tone-c49cff:#c49cff;--tone-160924:#160924;--tone-120d1d:#120d1d;--tone-352649:#352649;--tone-05030a99:#05030a99;--tone-9787ae:#9787ae;--tone-38264f:#38264f;--tone-130e1d:#130e1d;--tone-2b1941:#2b1941;--tone-6b5686:#6b5686;--tone-191025:#191025;--tone-f4edfc:#f4edfc;--tone-bcb0cc:#bcb0cc;--tone-d9c7f4:#d9c7f4;--tone-b181ff:#b181ff;--tone-4d4064:#4d4064;--tone-251a36:#251a36;--tone-eadbfc:#eadbfc;--tone-e8dcfa:#e8dcfa;--tone-e8dcff:#e8dcff;--tone-c9bada:#c9bada;--tone-312249:#312249;--tone-8551ce:#8551ce;--tone-efe6ff:#efe6ff;--tone-b7a4d7:#b7a4d7;--tone-321e50:#321e50;--tone-9970d0:#9970d0;--tone-432968:#432968;--tone-f7f5fc:#f7f5fc;--tone-f2edfb:#f2edfb;--tone-ded6e8:#ded6e8;--tone-252034:#252034;--tone-675d76:#675d76;--tone-fcfbff:#fcfbff;--tone-f3f0f9:#f3f0f9;--tone-292334:#292334;--tone-20172f:#20172f;--tone-110d1c:#110d1c;--tone-f5f0ff:#f5f0ff;--tone-30283f:#30283f;--tone-ddd2ee:#ddd2ee;--tone-20182f:#20182f;--tone-766a89:#766a89;--tone-574e69:#574e69;--tone-291b3c:#291b3c;--tone-eee6fa:#eee6fa;--tone-30213c:#30213c;--tone-e4ddeb:#e4ddeb;--tone-322642:#322642;--tone-776a88:#776a88;--tone-f4eff8:#f4eff8;--tone-4e3865:#4e3865;--tone-f0e9fa:#f0e9fa;--tone-e2d6ed:#e2d6ed;--tone-e3ddeb:#e3ddeb;--tone-20102b0a:#20102b0a;--tone-281f37:#281f37;--tone-6f637e:#6f637e;--tone-514663:#514663;--tone-31263d:#31263d;--tone-d9cfe5:#d9cfe5;--tone-2b2436:#2b2436;--tone-9c90aa:#9c90aa;--tone-272035:#272035;--tone-f4f0fa:#f4f0fa;--tone-655677:#655677;--tone-453b55:#453b55;--tone-e6deec:#e6deec;--tone-f7f0ff:#f7f0ff;--tone-443255:#443255;--tone-d3c5e3:#d3c5e3;--tone-2a1e36:#2a1e36;--tone-49335d:#49335d;--tone-e5deee:#e5deee;--tone-e9e1f4:#e9e1f4;--tone-2b2236:#2b2236;--tone-e0d0f0:#e0d0f0;--tone-30243f:#30243f;--tone-392951:#392951;--tone-3c2d4e:#3c2d4e;--tone-dbc9e9:#dbc9e9;--tone-2a2237:#2a2237;--tone-eee6f3:#eee6f3;--tone-f5f0fa:#f5f0fa;--tone-e8ddf0:#e8ddf0;--tone-685c79:#685c79;--tone-e8dff0:#e8dff0;--tone-31223f:#31223f;--tone-e7deee:#e7deee;--tone-786a88:#786a88;--tone-fcfaff:#fcfaff;--tone-2f2639:#2f2639;--tone-685b77:#685b77;--tone-3e3150:#3e3150;--tone-604976:#604976;--tone-f5effb:#f5effb;--tone-382842:#382842;--tone-e5d5f0:#e5d5f0;--tone-faf6ff:#faf6ff;--tone-3f3151:#3f3151;--tone-746384:#746384;--tone-f4edfa:#f4edfa;--tone-4c3565:#4c3565;--tone-30213e:#30213e;--tone-eee5f4:#eee5f4;--tone-efe2ff:#efe2ff;--tone-513176:#513176;--tone-efe3fd:#efe3fd;--tone-533e75:#533e75;--tone-e3d8eb:#e3d8eb;--tone-6e6279:#6e6279;--tone-f8f5fc:#f8f5fc;--tone-2f203b:#2f203b;--tone-dbc5ef:#dbc5ef;--tone-2c213a:#2c213a;--tone-6f5e85:#6f5e85;--tone-30223e:#30223e;--tone-d2c3e4:#d2c3e4;--tone-2b2534:#2b2534;--tone-dfd4e8:#dfd4e8;--tone-746682:#746682;--tone-403254:#403254;--tone-decfed:#decfed;--tone-392a4b:#392a4b;--tone-251d30:#251d30;--tone-756b83:#756b83;--tone-eae0f7:#eae0f7;--tone-33223e:#33223e;--tone-ad7bff:#ad7bff;}
+:root[data-accent=blue]{--tone-0a0811:#080c11;--tone-151020:#101720;--tone-1b1429:#141d29;--tone-322743:#273343;--tone-f7f4ff:#f4f9ff;--tone-aaa0bc:#a0acbc;--tone-ac7bff:#7bb2ff;--tone-8d57f3:#5799f3;--tone-24153780:#15233780;--tone-b48aff:#8abbff;--tone-130d1f:#0d151f;--tone-0b0912:#090d12;--tone-2b2040:#202d40;--tone-9c65ff:#65a6ff;--tone-4f278e:#27528e;--tone-6d3bc13d:#3b73c13d;--tone-8d819f:#818d9f;--tone-ada2c1:#a2afc1;--tone-6336a85b:#3665a85b;--tone-47317052:#314b7052;--tone-b78bff:#8bbbff;--tone-241b35:#1b2635;--tone-36294f:#29394f;--tone-e7d6ff:#d6e7ff;--tone-2e2340:#232f40;--tone-9588aa:#8896aa;--tone-b597ff:#97c3ff;--tone-a678ef21:#78aaef21;--tone-100c1a:#0c121a;--tone-2d223e:#222e3e;--tone-e6dffa:#dfebfa;--tone-211831:#182231;--tone-cba9ff:#a9cdff;--tone-412d5d:#2d415d;--tone-171021:#101721;--tone-fefaff11:#fafcff11;--tone-e1d5fa:#d5e5fa;--tone-1e172c:#17202c;--tone-f1eaff:#eaf3ff;--tone-3a2b51:#2b3b51;--tone-1b112b:#111c2b;--tone-e7d9ff:#d9e9ff;--tone-f9f1ff:#f1f7ff;--tone-b1a6c5:#a6b3c5;--tone-2a1b42:#1b2b42;--tone-7047af:#4772af;--tone-a675ed35:#75a7ed35;--tone-21192e:#19222e;--tone-bb8dff:#8dbcff;--tone-a79cba:#9ca9ba;--tone-bc94ff:#94c1ff;--tone-895db4:#5d80b4;--tone-c28eff:#8ebcff;--tone-7640c47a:#4077c47a;--tone-311753:#173053;--tone-1b122e:#121e2e;--tone-100d1b:#0d131b;--tone-60408b:#405f8b;--tone-02010740:#01040740;--tone-dbc1ff:#c1dbff;--tone-ccbee2:#becde2;--tone-a77eff3d:#7eb5ff3d;--tone-c9a3ff:#a3c9ff;--tone-2c1745:#172a45;--tone-2a1c41:#1c2b41;--tone-7251a1:#5172a1;--tone-f8edff:#edf4ff;--tone-191324:#131a24;--tone-130f1e:#0f151e;--tone-03010624:#01030624;--tone-8844ec0d:#448aec0d;--tone-2f2246:#223146;--tone-be94ff:#94c0ff;--tone-afa4c1:#a4b0c1;--tone-847b95:#7b8695;--tone-f9f6ff:#f6faff;--tone-9e91b4:#91a0b4;--tone-2b203e:#202d3e;--tone-cdb5f7:#b5d1f7;--tone-413055:#303f55;--tone-a99abc:#9aa8bc;--tone-322641:#263141;--tone-8248ee:#488eee;--tone-c5a1ff:#a1c8ff;--tone-b9a6d1:#a6b8d1;--tone-c8a5ff:#a5caff;--tone-afa2c3:#a2b0c3;--tone-f4edff:#edf4ff;--tone-30263f:#26303f;--tone-352250:#223550;--tone-e0c8ff:#c8dfff;--tone-9588a8:#8895a8;--tone-a79abc:#9aa8bc;--tone-1a1425:#141b25;--tone-342843:#283343;--tone-332643:#263243;--tone-100c1b:#0c121b;--tone-413254:#324054;--tone-f6f2ff:#f2f8ff;--tone-a88fbf:#8fa2bf;--tone-1d162b:#161f2b;--tone-d9caec:#cad8ec;--tone-9d8cb6:#8c9db6;--tone-221a30:#1a2330;--tone-ac99c8:#99acc8;--tone-c5b8d8:#b8c5d8;--tone-322643:#263243;--tone-241935:#192535;--tone-9e90b1:#909eb1;--tone-34234e:#23354e;--tone-d7bbff:#bbd7ff;--tone-a698be:#98a8be;--tone-36234c:#23344c;--tone-d2b2ff:#b2d2ff;--tone-a192b5:#92a0b5;--tone-b9aacd:#aab8cd;--tone-f2ecff:#ecf4ff;--tone-453453:#344053;--tone-b189ff:#89bbff;--tone-766b88:#6b7788;--tone-130d20:#0d1520;--tone-f2edff:#edf5ff;--tone-a496b9:#96a5b9;--tone-1c1829:#181f29;--tone-c9b7dc:#b7c6dc;--tone-3c3052:#303e52;--tone-a99abd:#9aa8bd;--tone-302440:#243040;--tone-211735:#172435;--tone-49305f:#30435f;--tone-ead7ff:#d7e7ff;--tone-181121:#111821;--tone-312143:#212f43;--tone-e3beff:#bed8ff;--tone-171121:#111821;--tone-563b73:#3b5273;--tone-07050bd9:#05080bd9;--tone-382a47:#2a3647;--tone-a99aba:#9aa7ba;--tone-31223e:#222d3e;--tone-d9bee9:#becfe9;--tone-ebe0ff:#e0edff;--tone-1c102d:#101c2d;--tone-0a0611a0:#060b11a0;--tone-925ae366:#5a93e366;--tone-312052:#203552;--tone-684794:#476794;--tone-06000d6b:#00050d6b;--tone-c7b6e1:#b6c8e1;--tone-d9b5ff:#b5d3ff;--tone-c9a1ff:#a1c8ff;--tone-9e62ef28:#629cef28;--tone-d0bee6:#becee6;--tone-170f25:#0f1825;--tone-74569c:#56739c;--tone-28163c:#16253c;--tone-e6d5ff:#d5e6ff;--tone-c0a3ed:#a3c2ed;--tone-28153e:#15263e;--tone-39234d:#23344d;--tone-f5e8ff:#e8f1ff;--tone-a779db:#79a1db;--tone-332741:#273241;--tone-aea0c0:#a0adc0;--tone-d2adff:#adcfff;--tone-2a1b40:#1b2a40;--tone-e0c4ff:#c4dcff;--tone-5a3b81:#3b5881;--tone-c8b0ff:#b0d2ff;--tone-342747:#273447;--tone-9584af:#8496af;--tone-5b328d:#32578d;--tone-100923:#091423;--tone-251936:#192536;--tone-3d304e:#303c4e;--tone-9184a8:#8493a8;--tone-ae82ff:#82b6ff;--tone-9859ff77:#599eff77;--tone-c9a7ff:#a7ccff;--tone-1b1129:#111b29;--tone-af7fff:#7fb4ff;--tone-a579db:#79a1db;--tone-302442:#243042;--tone-c4b4d8:#b4c3d8;--tone-392451:#243651;--tone-634490:#446390;--tone-9586a9:#8694a9;--tone-c1a4ee:#a4c3ee;--tone-ece3ff:#e3efff;--tone-2e203e:#202c3e;--tone-49345e:#34455e;--tone-b691f3:#91baf3;--tone-e8d8ff:#d8e8ff;--tone-c9bdd9:#bdc9d9;--tone-c49cff:#9cc5ff;--tone-160924:#091424;--tone-120d1d:#0d141d;--tone-352649:#263449;--tone-05030a99:#03060a99;--tone-9787ae:#8797ae;--tone-38264f:#26374f;--tone-130e1d:#0e141d;--tone-2b1941:#192941;--tone-6b5686:#566a86;--tone-191025:#101925;--tone-f4edfc:#edf3fc;--tone-bcb0cc:#b0bccc;--tone-d9c7f4:#c7daf4;--tone-b181ff:#81b6ff;--tone-4d4064:#404f64;--tone-251a36:#1a2636;--tone-eadbfc:#dbe9fc;--tone-e8dcfa:#dce8fa;--tone-e8dcff:#dcebff;--tone-c9bada:#bac7da;--tone-312249:#223249;--tone-8551ce:#5185ce;--tone-efe6ff:#e6f0ff;--tone-b7a4d7:#a4b9d7;--tone-321e50:#1e3350;--tone-9970d0:#7098d0;--tone-432968:#294368;--tone-f7f5fc:#f5f8fc;--tone-f2edfb:#edf3fb;--tone-ded6e8:#d6dde8;--tone-252034:#202934;--tone-675d76:#5d6776;--tone-fcfbff:#fbfdff;--tone-f3f0f9:#f0f4f9;--tone-292334:#232a34;--tone-20172f:#17212f;--tone-110d1c:#0d131c;--tone-f5f0ff:#f0f6ff;--tone-30283f:#28323f;--tone-ddd2ee:#d2deee;--tone-20182f:#18222f;--tone-766a89:#6a7789;--tone-574e69:#4e5969;--tone-291b3c:#1b293c;--tone-eee6fa:#e6eefa;--tone-30213c:#212c3c;--tone-e4ddeb:#dde3eb;--tone-322642:#263242;--tone-776a88:#6a7688;--tone-f4eff8:#eff3f8;--tone-4e3865:#384a65;--tone-f0e9fa:#e9f0fa;--tone-e2d6ed:#d6dfed;--tone-e3ddeb:#dde3eb;--tone-20102b0a:#101b2b0a;--tone-281f37:#1f2937;--tone-6f637e:#636e7e;--tone-514663:#465263;--tone-31263d:#262f3d;--tone-d9cfe5:#cfd8e5;--tone-2b2436:#242b36;--tone-9c90aa:#909baa;--tone-272035:#202935;--tone-f4f0fa:#f0f4fa;--tone-655677:#566477;--tone-453b55:#3b4655;--tone-e6deec:#dee4ec;--tone-f7f0ff:#f0f6ff;--tone-443255:#324055;--tone-d3c5e3:#c5d1e3;--tone-2a1e36:#1e2836;--tone-49335d:#33445d;--tone-e5deee:#dee5ee;--tone-e9e1f4:#e1e9f4;--tone-2b2236:#222a36;--tone-e0d0f0:#d0ddf0;--tone-30243f:#242f3f;--tone-392951:#293a51;--tone-3c2d4e:#2d3b4e;--tone-dbc9e9:#c9d6e9;--tone-2a2237:#222b37;--tone-eee6f3:#e6ebf3;--tone-f5f0fa:#f0f4fa;--tone-e8ddf0:#dde5f0;--tone-685c79:#5c6879;--tone-e8dff0:#dfe6f0;--tone-31223f:#222e3f;--tone-e7deee:#dee4ee;--tone-786a88:#6a7688;--tone-fcfaff:#fafcff;--tone-2f2639:#262e39;--tone-685b77:#5b6677;--tone-3e3150:#313e50;--tone-604976:#495b76;--tone-f5effb:#eff4fb;--tone-382842:#283242;--tone-e5d5f0:#d5e0f0;--tone-faf6ff:#f6faff;--tone-3f3151:#313e51;--tone-746384:#637084;--tone-f4edfa:#edf2fa;--tone-4c3565:#354965;--tone-30213e:#212d3e;--tone-eee5f4:#e5ebf4;--tone-efe2ff:#e2eeff;--tone-513176:#314d76;--tone-efe3fd:#e3eefd;--tone-533e75:#3e5575;--tone-e3d8eb:#d8e0eb;--tone-6e6279:#626b79;--tone-f8f5fc:#f5f8fc;--tone-2f203b:#202b3b;--tone-dbc5ef:#c5d6ef;--tone-2c213a:#212b3a;--tone-6f5e85:#5e6e85;--tone-30223e:#222d3e;--tone-d2c3e4:#c3d1e4;--tone-2b2534:#252b34;--tone-dfd4e8:#d4dce8;--tone-746682:#667182;--tone-403254:#324054;--tone-decfed:#cfdbed;--tone-392a4b:#2a384b;--tone-251d30:#1d2530;--tone-756b83:#6b7583;--tone-eae0f7:#e0e9f7;--tone-33223e:#222d3e;--tone-ad7bff:#7bb2ff;}
+:root[data-accent=green]{--tone-0a0811:#08110c;--tone-151020:#102018;--tone-1b1429:#14291e;--tone-322743:#274335;--tone-f7f4ff:#f4fff9;--tone-aaa0bc:#a0bcae;--tone-ac7bff:#7bffbd;--tone-8d57f3:#57f3a4;--tone-24153780:#15372680;--tone-b48aff:#8affc4;--tone-130d1f:#0d1f16;--tone-0b0912:#09120d;--tone-2b2040:#204030;--tone-9c65ff:#65ffb2;--tone-4f278e:#278e5b;--tone-6d3bc13d:#3bc17e3d;--tone-8d819f:#819f90;--tone-ada2c1:#a2c1b1;--tone-6336a85b:#36a86f5b;--tone-47317052:#31705052;--tone-b78bff:#8bffc5;--tone-241b35:#1b3528;--tone-36294f:#294f3c;--tone-e7d6ff:#d6ffeb;--tone-2e2340:#234031;--tone-9588aa:#88aa99;--tone-b597ff:#97ffca;--tone-a678ef21:#78efb421;--tone-100c1a:#0c1a13;--tone-2d223e:#223e30;--tone-e6dffa:#dffaec;--tone-211831:#183124;--tone-cba9ff:#a9ffd4;--tone-412d5d:#2d5d45;--tone-171021:#102119;--tone-fefaff11:#fafffd11;--tone-e1d5fa:#d5fae7;--tone-1e172c:#172c21;--tone-f1eaff:#eafff4;--tone-3a2b51:#2b513e;--tone-1b112b:#112b1e;--tone-e7d9ff:#d9ffec;--tone-f9f1ff:#f1fff8;--tone-b1a6c5:#a6c5b5;--tone-2a1b42:#1b422f;--tone-7047af:#47af7b;--tone-a675ed35:#75edb135;--tone-21192e:#192e23;--tone-bb8dff:#8dffc6;--tone-a79cba:#9cbaab;--tone-bc94ff:#94ffc9;--tone-895db4:#5db48a;--tone-c28eff:#8effc7;--tone-7640c47a:#40c4827a;--tone-311753:#175335;--tone-1b122e:#122e20;--tone-100d1b:#0d1b14;--tone-60408b:#408b66;--tone-02010740:#01070440;--tone-dbc1ff:#c1ffe0;--tone-ccbee2:#bee2d0;--tone-a77eff3d:#7effbe3d;--tone-c9a3ff:#a3ffd1;--tone-2c1745:#17452e;--tone-2a1c41:#1c412e;--tone-7251a1:#51a179;--tone-f8edff:#edfff6;--tone-191324:#13241b;--tone-130f1e:#0f1e16;--tone-03010624:#01060424;--tone-8844ec0d:#44ec980d;--tone-2f2246:#224634;--tone-be94ff:#94ffca;--tone-afa4c1:#a4c1b2;--tone-847b95:#7b9588;--tone-f9f6ff:#f6fffa;--tone-9e91b4:#91b4a2;--tone-2b203e:#203e2f;--tone-cdb5f7:#b5f7d6;--tone-413055:#305543;--tone-a99abc:#9abcab;--tone-322641:#264134;--tone-8248ee:#48ee9a;--tone-c5a1ff:#a1ffd0;--tone-b9a6d1:#a6d1bc;--tone-c8a5ff:#a5ffd2;--tone-afa2c3:#a2c3b3;--tone-f4edff:#edfff6;--tone-30263f:#263f33;--tone-352250:#225039;--tone-e0c8ff:#c8ffe4;--tone-9588a8:#88a898;--tone-a79abc:#9abcab;--tone-1a1425:#14251c;--tone-342843:#284336;--tone-332643:#264335;--tone-100c1b:#0c1b13;--tone-413254:#325443;--tone-f6f2ff:#f2fff8;--tone-a88fbf:#8fbfa8;--tone-1d162b:#162b20;--tone-d9caec:#caecdb;--tone-9d8cb6:#8cb6a1;--tone-221a30:#1a3025;--tone-ac99c8:#99c8b1;--tone-c5b8d8:#b8d8c8;--tone-322643:#264335;--tone-241935:#193527;--tone-9e90b1:#90b1a1;--tone-34234e:#234e39;--tone-d7bbff:#bbffdd;--tone-a698be:#98beab;--tone-36234c:#234c38;--tone-d2b2ff:#b2ffd9;--tone-a192b5:#92b5a4;--tone-b9aacd:#aacdbc;--tone-f2ecff:#ecfff5;--tone-453453:#345344;--tone-b189ff:#89ffc3;--tone-766b88:#6b8879;--tone-130d20:#0d2016;--tone-f2edff:#edfff6;--tone-a496b9:#96b9a8;--tone-1c1829:#182920;--tone-c9b7dc:#b7dcca;--tone-3c3052:#305241;--tone-a99abd:#9abdac;--tone-302440:#244032;--tone-211735:#173526;--tone-49305f:#305f48;--tone-ead7ff:#d7ffeb;--tone-181121:#112119;--tone-312143:#214332;--tone-e3beff:#beffe0;--tone-171121:#112119;--tone-563b73:#3b7358;--tone-07050bd9:#050b08d9;--tone-382a47:#2a4739;--tone-a99aba:#9abaaa;--tone-31223e:#223e30;--tone-d9bee9:#bee9d5;--tone-ebe0ff:#e0ffef;--tone-1c102d:#102d1f;--tone-0a0611a0:#06110ba0;--tone-925ae366:#5ae39f66;--tone-312052:#205239;--tone-684794:#47946e;--tone-06000d6b:#000d076b;--tone-c7b6e1:#b6e1cc;--tone-d9b5ff:#b5ffdb;--tone-c9a1ff:#a1ffd0;--tone-9e62ef28:#62efa928;--tone-d0bee6:#bee6d2;--tone-170f25:#0f251a;--tone-74569c:#569c79;--tone-28163c:#163c29;--tone-e6d5ff:#d5ffea;--tone-c0a3ed:#a3edc8;--tone-28153e:#153e2a;--tone-39234d:#234d39;--tone-f5e8ff:#e8fff4;--tone-a779db:#79dbab;--tone-332741:#274134;--tone-aea0c0:#a0c0b0;--tone-d2adff:#adffd7;--tone-2a1b40:#1b402e;--tone-e0c4ff:#c4ffe2;--tone-5a3b81:#3b815e;--tone-c8b0ff:#b0ffd7;--tone-342747:#274737;--tone-9584af:#84af9a;--tone-5b328d:#328d60;--tone-100923:#092316;--tone-251936:#193628;--tone-3d304e:#304e3f;--tone-9184a8:#84a896;--tone-ae82ff:#82ffc0;--tone-9859ff77:#59ffac77;--tone-c9a7ff:#a7ffd3;--tone-1b1129:#11291d;--tone-af7fff:#7fffbf;--tone-a579db:#79dbab;--tone-302442:#244233;--tone-c4b4d8:#b4d8c6;--tone-392451:#24513b;--tone-634490:#44906a;--tone-9586a9:#86a998;--tone-c1a4ee:#a4eec9;--tone-ece3ff:#e3fff1;--tone-2e203e:#203e2f;--tone-49345e:#345e49;--tone-b691f3:#91f3c2;--tone-e8d8ff:#d8ffec;--tone-c9bdd9:#bdd9cb;--tone-c49cff:#9cffce;--tone-160924:#092417;--tone-120d1d:#0d1d15;--tone-352649:#264938;--tone-05030a99:#030a0699;--tone-9787ae:#87ae9b;--tone-38264f:#264f3b;--tone-130e1d:#0e1d15;--tone-2b1941:#19412d;--tone-6b5686:#56866e;--tone-191025:#10251b;--tone-f4edfc:#edfcf5;--tone-bcb0cc:#b0ccbe;--tone-d9c7f4:#c7f4de;--tone-b181ff:#81ffc0;--tone-4d4064:#406452;--tone-251a36:#1a3628;--tone-eadbfc:#dbfcec;--tone-e8dcfa:#dcfaeb;--tone-e8dcff:#dcffed;--tone-c9bada:#badaca;--tone-312249:#224936;--tone-8551ce:#51ce90;--tone-efe6ff:#e6fff2;--tone-b7a4d7:#a4d7bd;--tone-321e50:#1e5037;--tone-9970d0:#70d0a0;--tone-432968:#296849;--tone-f7f5fc:#f5fcf8;--tone-f2edfb:#edfbf4;--tone-ded6e8:#d6e8df;--tone-252034:#20342a;--tone-675d76:#5d766a;--tone-fcfbff:#fbfffd;--tone-f3f0f9:#f0f9f4;--tone-292334:#23342b;--tone-20172f:#172f23;--tone-110d1c:#0d1c14;--tone-f5f0ff:#f0fff7;--tone-30283f:#283f33;--tone-ddd2ee:#d2eee0;--tone-20182f:#182f23;--tone-766a89:#6a897a;--tone-574e69:#4e695b;--tone-291b3c:#1b3c2c;--tone-eee6fa:#e6faf0;--tone-30213c:#213c2f;--tone-e4ddeb:#ddebe4;--tone-322642:#264234;--tone-776a88:#6a8879;--tone-f4eff8:#eff8f4;--tone-4e3865:#38654f;--tone-f0e9fa:#e9faf2;--tone-e2d6ed:#d6ede2;--tone-e3ddeb:#ddebe4;--tone-20102b0a:#102b1e0a;--tone-281f37:#1f372b;--tone-6f637e:#637e71;--tone-514663:#466354;--tone-31263d:#263d32;--tone-d9cfe5:#cfe5da;--tone-2b2436:#24362d;--tone-9c90aa:#90aa9d;--tone-272035:#20352a;--tone-f4f0fa:#f0faf5;--tone-655677:#567767;--tone-453b55:#3b5548;--tone-e6deec:#deece5;--tone-f7f0ff:#f0fff8;--tone-443255:#325544;--tone-d3c5e3:#c5e3d4;--tone-2a1e36:#1e362a;--tone-49335d:#335d49;--tone-e5deee:#deeee6;--tone-e9e1f4:#e1f4eb;--tone-2b2236:#22362c;--tone-e0d0f0:#d0f0e0;--tone-30243f:#243f32;--tone-392951:#29513d;--tone-3c2d4e:#2d4e3e;--tone-dbc9e9:#c9e9da;--tone-2a2237:#22372c;--tone-eee6f3:#e6f3ed;--tone-f5f0fa:#f0faf5;--tone-e8ddf0:#ddf0e7;--tone-685c79:#5c796b;--tone-e8dff0:#dff0e8;--tone-31223f:#223f31;--tone-e7deee:#deeee6;--tone-786a88:#6a8879;--tone-fcfaff:#fafffd;--tone-2f2639:#263930;--tone-685b77:#5b7769;--tone-3e3150:#315041;--tone-604976:#497660;--tone-f5effb:#effbf5;--tone-382842:#284236;--tone-e5d5f0:#d5f0e3;--tone-faf6ff:#f6fffb;--tone-3f3151:#315141;--tone-746384:#638474;--tone-f4edfa:#edfaf4;--tone-4c3565:#35654d;--tone-30213e:#213e30;--tone-eee5f4:#e5f4ed;--tone-efe2ff:#e2fff1;--tone-513176:#317654;--tone-efe3fd:#e3fdf0;--tone-533e75:#3e7559;--tone-e3d8eb:#d8ebe2;--tone-6e6279:#62796e;--tone-f8f5fc:#f5fcf9;--tone-2f203b:#203b2e;--tone-dbc5ef:#c5efdb;--tone-2c213a:#213a2e;--tone-6f5e85:#5e8572;--tone-30223e:#223e30;--tone-d2c3e4:#c3e4d4;--tone-2b2534:#25342d;--tone-dfd4e8:#d4e8de;--tone-746682:#668274;--tone-403254:#325443;--tone-decfed:#cfedde;--tone-392a4b:#2a4b3b;--tone-251d30:#1d3027;--tone-756b83:#6b8377;--tone-eae0f7:#e0f7ec;--tone-33223e:#223e31;--tone-ad7bff:#7bffbd;}
+:root[data-accent=red]{--tone-0a0811:#110809;--tone-151020:#201012;--tone-1b1429:#291417;--tone-322743:#43272a;--tone-f7f4ff:#fff4f5;--tone-aaa0bc:#bca0a3;--tone-ac7bff:#ff7b8b;--tone-8d57f3:#f3576a;--tone-24153780:#37151980;--tone-b48aff:#ff8a98;--tone-130d1f:#1f0d0f;--tone-0b0912:#12090a;--tone-2b2040:#402024;--tone-9c65ff:#ff6577;--tone-4f278e:#8e2733;--tone-6d3bc13d:#c13b4b3d;--tone-8d819f:#9f8184;--tone-ada2c1:#c1a2a6;--tone-6336a85b:#a836435b;--tone-47317052:#70313952;--tone-b78bff:#ff8b99;--tone-241b35:#351b1e;--tone-36294f:#4f292e;--tone-e7d6ff:#ffd6db;--tone-2e2340:#402326;--tone-9588aa:#aa888c;--tone-b597ff:#ff97a4;--tone-a678ef21:#ef788621;--tone-100c1a:#1a0c0e;--tone-2d223e:#3e2225;--tone-e6dffa:#fadfe2;--tone-211831:#31181b;--tone-cba9ff:#ffa9b3;--tone-412d5d:#5d2d32;--tone-171021:#211012;--tone-fefaff11:#fffafa11;--tone-e1d5fa:#fad5da;--tone-1e172c:#2c171a;--tone-f1eaff:#ffeaed;--tone-3a2b51:#512b2f;--tone-1b112b:#2b1114;--tone-e7d9ff:#ffd9dd;--tone-f9f1ff:#fff1f2;--tone-b1a6c5:#c5a6aa;--tone-2a1b42:#421b20;--tone-7047af:#af4753;--tone-a675ed35:#ed758335;--tone-21192e:#2e191b;--tone-bb8dff:#ff8d9a;--tone-a79cba:#ba9ca0;--tone-bc94ff:#ff94a1;--tone-895db4:#b45d66;--tone-c28eff:#ff8e9a;--tone-7640c47a:#c4404f7a;--tone-311753:#53171e;--tone-1b122e:#2e1215;--tone-100d1b:#1b0d0f;--tone-60408b:#8b4048;--tone-02010740:#07010240;--tone-dbc1ff:#ffc1c8;--tone-ccbee2:#e2bec2;--tone-a77eff3d:#ff7e8e3d;--tone-c9a3ff:#ffa3ad;--tone-2c1745:#45171c;--tone-2a1c41:#411c20;--tone-7251a1:#a1515a;--tone-f8edff:#ffedef;--tone-191324:#241315;--tone-130f1e:#1e0f11;--tone-03010624:#06010224;--tone-8844ec0d:#ec44570d;--tone-2f2246:#462226;--tone-be94ff:#ff94a0;--tone-afa4c1:#c1a4a7;--tone-847b95:#957b7e;--tone-f9f6ff:#fff6f7;--tone-9e91b4:#b49195;--tone-2b203e:#3e2024;--tone-cdb5f7:#f7b5bd;--tone-413055:#553034;--tone-a99abc:#bc9a9e;--tone-322641:#412629;--tone-8248ee:#ee485c;--tone-c5a1ff:#ffa1ac;--tone-b9a6d1:#d1a6ab;--tone-c8a5ff:#ffa5af;--tone-afa2c3:#c3a2a6;--tone-f4edff:#ffedef;--tone-30263f:#3f2629;--tone-352250:#502227;--tone-e0c8ff:#ffc8ce;--tone-9588a8:#a8888c;--tone-a79abc:#bc9a9e;--tone-1a1425:#251416;--tone-342843:#43282b;--tone-332643:#432629;--tone-100c1b:#1b0c0e;--tone-413254:#543236;--tone-f6f2ff:#fff2f4;--tone-a88fbf:#bf8f94;--tone-1d162b:#2b1619;--tone-d9caec:#eccace;--tone-9d8cb6:#b68c91;--tone-221a30:#301a1d;--tone-ac99c8:#c8999e;--tone-c5b8d8:#d8b8bc;--tone-322643:#432629;--tone-241935:#35191c;--tone-9e90b1:#b19094;--tone-34234e:#4e2328;--tone-d7bbff:#ffbbc3;--tone-a698be:#be989c;--tone-36234c:#4c2327;--tone-d2b2ff:#ffb2bb;--tone-a192b5:#b59296;--tone-b9aacd:#cdaaae;--tone-f2ecff:#ffecee;--tone-453453:#533437;--tone-b189ff:#ff8997;--tone-766b88:#886b6e;--tone-130d20:#200d0f;--tone-f2edff:#ffedef;--tone-a496b9:#b9969a;--tone-1c1829:#29181a;--tone-c9b7dc:#dcb7bb;--tone-3c3052:#523034;--tone-a99abd:#bd9a9e;--tone-302440:#402427;--tone-211735:#35171b;--tone-49305f:#5f3035;--tone-ead7ff:#ffd7db;--tone-181121:#211113;--tone-312143:#432125;--tone-e3beff:#ffbec4;--tone-171121:#211113;--tone-563b73:#733b41;--tone-07050bd9:#0b0506d9;--tone-382a47:#472a2d;--tone-a99aba:#ba9a9d;--tone-31223e:#3e2225;--tone-d9bee9:#e9bec2;--tone-ebe0ff:#ffe0e4;--tone-1c102d:#2d1013;--tone-0a0611a0:#110607a0;--tone-925ae366:#e35a6a66;--tone-312052:#522026;--tone-684794:#944750;--tone-06000d6b:#0d00016b;--tone-c7b6e1:#e1b6bb;--tone-d9b5ff:#ffb5bd;--tone-c9a1ff:#ffa1ac;--tone-9e62ef28:#ef627228;--tone-d0bee6:#e6bec2;--tone-170f25:#250f12;--tone-74569c:#9c565e;--tone-28163c:#3c161a;--tone-e6d5ff:#ffd5da;--tone-c0a3ed:#eda3ac;--tone-28153e:#3e1519;--tone-39234d:#4d2327;--tone-f5e8ff:#ffe8ea;--tone-a779db:#db7984;--tone-332741:#41272a;--tone-aea0c0:#c0a0a4;--tone-d2adff:#ffadb6;--tone-2a1b40:#401b1f;--tone-e0c4ff:#ffc4ca;--tone-5a3b81:#813b43;--tone-c8b0ff:#ffb0ba;--tone-342747:#47272b;--tone-9584af:#af8489;--tone-5b328d:#8d323c;--tone-100923:#23090c;--tone-251936:#36191c;--tone-3d304e:#4e3033;--tone-9184a8:#a88488;--tone-ae82ff:#ff8291;--tone-9859ff77:#ff596c77;--tone-c9a7ff:#ffa7b1;--tone-1b1129:#291114;--tone-af7fff:#ff7f8e;--tone-a579db:#db7984;--tone-302442:#422427;--tone-c4b4d8:#d8b4b8;--tone-392451:#512429;--tone-634490:#90444d;--tone-9586a9:#a9868a;--tone-c1a4ee:#eea4ad;--tone-ece3ff:#ffe3e6;--tone-2e203e:#3e2023;--tone-49345e:#5e3438;--tone-b691f3:#f3919c;--tone-e8d8ff:#ffd8dc;--tone-c9bdd9:#d9bdc0;--tone-c49cff:#ff9ca7;--tone-160924:#24090c;--tone-120d1d:#1d0d0f;--tone-352649:#49262a;--tone-05030a99:#0a030499;--tone-9787ae:#ae878b;--tone-38264f:#4f262b;--tone-130e1d:#1d0e10;--tone-2b1941:#41191d;--tone-6b5686:#86565b;--tone-191025:#251012;--tone-f4edfc:#fcedef;--tone-bcb0cc:#ccb0b3;--tone-d9c7f4:#f4c7cc;--tone-b181ff:#ff8190;--tone-4d4064:#644044;--tone-251a36:#361a1d;--tone-eadbfc:#fcdbdf;--tone-e8dcfa:#fadcdf;--tone-e8dcff:#ffdce0;--tone-c9bada:#dababd;--tone-312249:#492227;--tone-8551ce:#ce515f;--tone-efe6ff:#ffe6e9;--tone-b7a4d7:#d7a4aa;--tone-321e50:#501e24;--tone-9970d0:#d0707b;--tone-432968:#682930;--tone-f7f5fc:#fcf5f6;--tone-f2edfb:#fbedef;--tone-ded6e8:#e8d6d8;--tone-252034:#342023;--tone-675d76:#765d60;--tone-fcfbff:#fffbfc;--tone-f3f0f9:#f9f0f1;--tone-292334:#342325;--tone-20172f:#2f171a;--tone-110d1c:#1c0d0f;--tone-f5f0ff:#fff0f2;--tone-30283f:#3f282b;--tone-ddd2ee:#eed2d5;--tone-20182f:#2f181b;--tone-766a89:#896a6e;--tone-574e69:#694e51;--tone-291b3c:#3c1b1f;--tone-eee6fa:#fae6e8;--tone-30213c:#3c2124;--tone-e4ddeb:#ebddde;--tone-322642:#422629;--tone-776a88:#886a6d;--tone-f4eff8:#f8eff0;--tone-4e3865:#65383d;--tone-f0e9fa:#fae9eb;--tone-e2d6ed:#edd6d8;--tone-e3ddeb:#ebdddf;--tone-20102b0a:#2b10130a;--tone-281f37:#371f22;--tone-6f637e:#7e6366;--tone-514663:#634649;--tone-31263d:#3d2628;--tone-d9cfe5:#e5cfd1;--tone-2b2436:#362426;--tone-9c90aa:#aa9093;--tone-272035:#352023;--tone-f4f0fa:#faf0f1;--tone-655677:#77565a;--tone-453b55:#553b3e;--tone-e6deec:#ecdedf;--tone-f7f0ff:#fff0f2;--tone-443255:#553236;--tone-d3c5e3:#e3c5c8;--tone-2a1e36:#361e21;--tone-49335d:#5d3337;--tone-e5deee:#eedee0;--tone-e9e1f4:#f4e1e3;--tone-2b2236:#362224;--tone-e0d0f0:#f0d0d3;--tone-30243f:#3f2427;--tone-392951:#51292e;--tone-3c2d4e:#4e2d31;--tone-dbc9e9:#e9c9cc;--tone-2a2237:#372224;--tone-eee6f3:#f3e6e7;--tone-f5f0fa:#faf0f1;--tone-e8ddf0:#f0dddf;--tone-685c79:#795c5f;--tone-e8dff0:#f0dfe1;--tone-31223f:#3f2225;--tone-e7deee:#eedee0;--tone-786a88:#886a6d;--tone-fcfaff:#fffafb;--tone-2f2639:#392628;--tone-685b77:#775b5e;--tone-3e3150:#503135;--tone-604976:#76494e;--tone-f5effb:#fbeff0;--tone-382842:#42282a;--tone-e5d5f0:#f0d5d8;--tone-faf6ff:#fff6f7;--tone-3f3151:#513135;--tone-746384:#846366;--tone-f4edfa:#faedee;--tone-4c3565:#65353a;--tone-30213e:#3e2124;--tone-eee5f4:#f4e5e6;--tone-efe2ff:#ffe2e5;--tone-513176:#763138;--tone-efe3fd:#fde3e6;--tone-533e75:#753e44;--tone-e3d8eb:#ebd8da;--tone-6e6279:#796264;--tone-f8f5fc:#fcf5f6;--tone-2f203b:#3b2023;--tone-dbc5ef:#efc5c9;--tone-2c213a:#3a2124;--tone-6f5e85:#855e62;--tone-30223e:#3e2225;--tone-d2c3e4:#e4c3c7;--tone-2b2534:#342527;--tone-dfd4e8:#e8d4d6;--tone-746682:#826669;--tone-403254:#543236;--tone-decfed:#edcfd2;--tone-392a4b:#4b2a2e;--tone-251d30:#301d1f;--tone-756b83:#836b6e;--tone-eae0f7:#f7e0e3;--tone-33223e:#3e2225;--tone-ad7bff:#ff7b8a;}
+:root[data-accent=gold]{--tone-0a0811:#110e08;--tone-151020:#201b10;--tone-1b1429:#292314;--tone-322743:#433b27;--tone-f7f4ff:#fffcf4;--tone-aaa0bc:#bcb4a0;--tone-ac7bff:#ffd77b;--tone-8d57f3:#f3c457;--tone-24153780:#372d1580;--tone-b48aff:#ffdc8a;--tone-130d1f:#1f1a0d;--tone-0b0912:#120f09;--tone-2b2040:#403620;--tone-9c65ff:#ffd065;--tone-4f278e:#8e6f27;--tone-6d3bc13d:#c1993b3d;--tone-8d819f:#9f9681;--tone-ada2c1:#c1b8a2;--tone-6336a85b:#a886365b;--tone-47317052:#705d3152;--tone-b78bff:#ffdc8b;--tone-241b35:#352d1b;--tone-36294f:#4f4329;--tone-e7d6ff:#fff3d6;--tone-2e2340:#403723;--tone-9588aa:#aaa088;--tone-b597ff:#ffdf97;--tone-a678ef21:#efcb7821;--tone-100c1a:#1a160c;--tone-2d223e:#3e3622;--tone-e6dffa:#faf2df;--tone-211831:#312918;--tone-cba9ff:#ffe5a9;--tone-412d5d:#5d4f2d;--tone-171021:#211c10;--tone-fefaff11:#fffefa11;--tone-e1d5fa:#faefd5;--tone-1e172c:#2c2617;--tone-f1eaff:#fff9ea;--tone-3a2b51:#51462b;--tone-1b112b:#2b2311;--tone-e7d9ff:#fff4d9;--tone-f9f1ff:#fffbf1;--tone-b1a6c5:#c5bca6;--tone-2a1b42:#42361b;--tone-7047af:#af9047;--tone-a675ed35:#edc97535;--tone-21192e:#2e2819;--tone-bb8dff:#ffdd8d;--tone-a79cba:#bab19c;--tone-bc94ff:#ffdf94;--tone-895db4:#b49b5d;--tone-c28eff:#ffde8e;--tone-7640c47a:#c49d407a;--tone-311753:#534117;--tone-1b122e:#2e2512;--tone-100d1b:#1b170d;--tone-60408b:#8b7540;--tone-02010740:#07050140;--tone-dbc1ff:#ffedc1;--tone-ccbee2:#e2d7be;--tone-a77eff3d:#ffd77e3d;--tone-c9a3ff:#ffe4a3;--tone-2c1745:#453817;--tone-2a1c41:#41361c;--tone-7251a1:#a18951;--tone-f8edff:#fffaed;--tone-191324:#241f13;--tone-130f1e:#1e190f;--tone-03010624:#06050124;--tone-8844ec0d:#ecba440d;--tone-2f2246:#463b22;--tone-be94ff:#ffdf94;--tone-afa4c1:#c1b8a4;--tone-847b95:#958d7b;--tone-f9f6ff:#fffcf6;--tone-9e91b4:#b4a991;--tone-2b203e:#3e3520;--tone-cdb5f7:#f7e3b5;--tone-413055:#554a30;--tone-a99abc:#bcb29a;--tone-322641:#413926;--tone-8248ee:#eebc48;--tone-c5a1ff:#ffe3a1;--tone-b9a6d1:#d1c4a6;--tone-c8a5ff:#ffe4a5;--tone-afa2c3:#c3b9a2;--tone-f4edff:#fffaed;--tone-30263f:#3f3826;--tone-352250:#504222;--tone-e0c8ff:#ffefc8;--tone-9588a8:#a89e88;--tone-a79abc:#bcb29a;--tone-1a1425:#252014;--tone-342843:#433b28;--tone-332643:#433a26;--tone-100c1b:#1b160c;--tone-413254:#544a32;--tone-f6f2ff:#fffbf2;--tone-a88fbf:#bfb18f;--tone-1d162b:#2b2516;--tone-d9caec:#ece2ca;--tone-9d8cb6:#b6a98c;--tone-221a30:#30291a;--tone-ac99c8:#c8ba99;--tone-c5b8d8:#d8ceb8;--tone-322643:#433a26;--tone-241935:#352d19;--tone-9e90b1:#b1a790;--tone-34234e:#4e4123;--tone-d7bbff:#ffebbb;--tone-a698be:#beb398;--tone-36234c:#4c4023;--tone-d2b2ff:#ffe8b2;--tone-a192b5:#b5ab92;--tone-b9aacd:#cdc3aa;--tone-f2ecff:#fff9ec;--tone-453453:#534a34;--tone-b189ff:#ffdb89;--tone-766b88:#887f6b;--tone-130d20:#201a0d;--tone-f2edff:#fff9ed;--tone-a496b9:#b9af96;--tone-1c1829:#292418;--tone-c9b7dc:#dcd1b7;--tone-3c3052:#524830;--tone-a99abd:#bdb39a;--tone-302440:#403824;--tone-211735:#352c17;--tone-49305f:#5f5230;--tone-ead7ff:#fff3d7;--tone-181121:#211c11;--tone-312143:#433921;--tone-e3beff:#ffedbe;--tone-171121:#211c11;--tone-563b73:#73633b;--tone-07050bd9:#0b0905d9;--tone-382a47:#473f2a;--tone-a99aba:#bab19a;--tone-31223e:#3e3622;--tone-d9bee9:#e9ddbe;--tone-ebe0ff:#fff6e0;--tone-1c102d:#2d2410;--tone-0a0611a0:#110e06a0;--tone-925ae366:#e3ba5a66;--tone-312052:#524320;--tone-684794:#947d47;--tone-06000d6b:#0d09006b;--tone-c7b6e1:#e1d4b6;--tone-d9b5ff:#ffeab5;--tone-c9a1ff:#ffe3a1;--tone-9e62ef28:#efc56228;--tone-d0bee6:#e6dabe;--tone-170f25:#251e0f;--tone-74569c:#9c8756;--tone-28163c:#3c3116;--tone-e6d5ff:#fff2d5;--tone-c0a3ed:#edd7a3;--tone-28153e:#3e3215;--tone-39234d:#4d4123;--tone-f5e8ff:#fff9e8;--tone-a779db:#dbbe79;--tone-332741:#413927;--tone-aea0c0:#c0b7a0;--tone-d2adff:#ffe7ad;--tone-2a1b40:#40351b;--tone-e0c4ff:#ffeec4;--tone-5a3b81:#816c3b;--tone-c8b0ff:#ffe7b0;--tone-342747:#473d27;--tone-9584af:#afa284;--tone-5b328d:#8d7232;--tone-100923:#231b09;--tone-251936:#362d19;--tone-3d304e:#4e4530;--tone-9184a8:#a89d84;--tone-ae82ff:#ffd982;--tone-9859ff77:#ffcd5977;--tone-c9a7ff:#ffe5a7;--tone-1b1129:#292211;--tone-af7fff:#ffd87f;--tone-a579db:#dbbe79;--tone-302442:#423924;--tone-c4b4d8:#d8cdb4;--tone-392451:#514424;--tone-634490:#907944;--tone-9586a9:#a99f86;--tone-c1a4ee:#eed8a4;--tone-ece3ff:#fff6e3;--tone-2e203e:#3e3520;--tone-49345e:#5e5234;--tone-b691f3:#f3d691;--tone-e8d8ff:#fff3d8;--tone-c9bdd9:#d9d1bd;--tone-c49cff:#ffe29c;--tone-160924:#241c09;--tone-120d1d:#1d180d;--tone-352649:#493f26;--tone-05030a99:#0a080399;--tone-9787ae:#aea287;--tone-38264f:#4f4326;--tone-130e1d:#1d180e;--tone-2b1941:#413519;--tone-6b5686:#867856;--tone-191025:#251f10;--tone-f4edfc:#fcf8ed;--tone-bcb0cc:#ccc4b0;--tone-d9c7f4:#f4e7c7;--tone-b181ff:#ffd981;--tone-4d4064:#645940;--tone-251a36:#362e1a;--tone-eadbfc:#fcf2db;--tone-e8dcfa:#faf1dc;--tone-e8dcff:#fff4dc;--tone-c9bada:#dad1ba;--tone-312249:#493d22;--tone-8551ce:#cea951;--tone-efe6ff:#fff7e6;--tone-b7a4d7:#d7c8a4;--tone-321e50:#50411e;--tone-9970d0:#d0b470;--tone-432968:#685529;--tone-f7f5fc:#fcfaf5;--tone-f2edfb:#fbf7ed;--tone-ded6e8:#e8e3d6;--tone-252034:#342e20;--tone-675d76:#766f5d;--tone-fcfbff:#fffefb;--tone-f3f0f9:#f9f6f0;--tone-292334:#342f23;--tone-20172f:#2f2817;--tone-110d1c:#1c170d;--tone-f5f0ff:#fffaf0;--tone-30283f:#3f3828;--tone-ddd2ee:#eee6d2;--tone-20182f:#2f2818;--tone-766a89:#89806a;--tone-574e69:#69614e;--tone-291b3c:#3c321b;--tone-eee6fa:#faf4e6;--tone-30213c:#3c3421;--tone-e4ddeb:#ebe7dd;--tone-322642:#423a26;--tone-776a88:#887f6a;--tone-f4eff8:#f8f5ef;--tone-4e3865:#655838;--tone-f0e9fa:#faf5e9;--tone-e2d6ed:#ede6d6;--tone-e3ddeb:#ebe7dd;--tone-20102b0a:#2b23100a;--tone-281f37:#37301f;--tone-6f637e:#7e7663;--tone-514663:#635a46;--tone-31263d:#3d3626;--tone-d9cfe5:#e5dfcf;--tone-2b2436:#363124;--tone-9c90aa:#aaa290;--tone-272035:#352f20;--tone-f4f0fa:#faf7f0;--tone-655677:#776d56;--tone-453b55:#554d3b;--tone-e6deec:#ece8de;--tone-f7f0ff:#fffbf0;--tone-443255:#554b32;--tone-d3c5e3:#e3dac5;--tone-2a1e36:#362f1e;--tone-49335d:#5d5133;--tone-e5deee:#eee9de;--tone-e9e1f4:#f4eee1;--tone-2b2236:#363022;--tone-e0d0f0:#f0e7d0;--tone-30243f:#3f3724;--tone-392951:#514529;--tone-3c2d4e:#4e442d;--tone-dbc9e9:#e9e0c9;--tone-2a2237:#373122;--tone-eee6f3:#f3efe6;--tone-f5f0fa:#faf7f0;--tone-e8ddf0:#f0ebdd;--tone-685c79:#79705c;--tone-e8dff0:#f0ebdf;--tone-31223f:#3f3722;--tone-e7deee:#eee9de;--tone-786a88:#887f6a;--tone-fcfaff:#fffefa;--tone-2f2639:#393326;--tone-685b77:#776f5b;--tone-3e3150:#504731;--tone-604976:#766949;--tone-f5effb:#fbf8ef;--tone-382842:#423b28;--tone-e5d5f0:#f0e8d5;--tone-faf6ff:#fffcf6;--tone-3f3151:#514831;--tone-746384:#847b63;--tone-f4edfa:#faf6ed;--tone-4c3565:#655735;--tone-30213e:#3e3621;--tone-eee5f4:#f4f0e5;--tone-efe2ff:#fff6e2;--tone-513176:#766231;--tone-efe3fd:#fdf5e3;--tone-533e75:#75643e;--tone-e3d8eb:#ebe6d8;--tone-6e6279:#797262;--tone-f8f5fc:#fcfaf5;--tone-2f203b:#3b3320;--tone-dbc5ef:#efe3c5;--tone-2c213a:#3a3321;--tone-6f5e85:#857a5e;--tone-30223e:#3e3622;--tone-d2c3e4:#e4dac3;--tone-2b2534:#343025;--tone-dfd4e8:#e8e2d4;--tone-746682:#827a66;--tone-403254:#544a32;--tone-decfed:#ede4cf;--tone-392a4b:#4b412a;--tone-251d30:#302a1d;--tone-756b83:#837c6b;--tone-eae0f7:#f7f0e0;--tone-33223e:#3e3622;--tone-ad7bff:#ffd77b;}
+
+:root[data-accent] .zone-summary{background:color-mix(in srgb,var(--accent) 12%,var(--surface));}
+:root[data-accent] .route-confirm input{accent-color:var(--accent)}
+:root[data-accent] .chart-point{fill:var(--accent-pale)}
+:root[data-accent] .trend-svg .selected-line{stroke:var(--accent-strong)}
+:root[data-accent] .trend-svg .trend-line{stroke:var(--accent)}
+:root[data-accent] .btn-outline:focus-visible{outline-color:var(--accent)}
+:root[data-accent] .accent-swatch.selected{outline-color:var(--accent-pale)}
+:root[data-accent] .nav-link.active{box-shadow:inset 3px 0 var(--accent)}
+:root[data-accent] .hero{background:radial-gradient(circle at 80% 14%,color-mix(in srgb,var(--accent) 25%,transparent),transparent 48%),linear-gradient(125deg,var(--surface2),var(--bg))}
+:root[data-theme=light] .hero{background:linear-gradient(125deg,color-mix(in srgb,var(--accent) 20%,white),var(--surface2));}
+:root[data-theme=light] .nav-link.active{background:color-mix(in srgb,var(--accent) 18%,white)}
+:root[data-theme=light] .btn-dark{background:var(--accent-strong);color:#fff;border-color:var(--accent-strong)}
+:root[data-theme=light] .btn-dark:hover{background:var(--accent)}
+:root[data-theme=light] .sync-chip{background:color-mix(in srgb,var(--accent) 14%,white);color:color-mix(in srgb,var(--accent-strong) 80%,black);border-color:color-mix(in srgb,var(--accent) 36%,white)}
+:root[data-accent] .open-times-quick{border-color:var(--accent-strong)}
+/* Notifications */
+.alert-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.alert-status{margin:8px 0;font-size:12px;color:var(--muted)}
+.alert-example{border:1px solid var(--accent-strong);background:var(--accent-soft);color:var(--text);padding:12px 14px;border-radius:12px;margin-top:10px;font-size:12px}
+.alert-item{margin-top:8px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.alert-item button{flex-shrink:0}
+
+/* Version 4.8: swatches show the actual color they select, never the current theme. */
+.accent-swatch[data-accent="purple"]{--swatch:#ad7bff !important;background:#ad7bff !important}
+.accent-swatch[data-accent="blue"]{--swatch:#71a9ff !important;background:#71a9ff !important}
+.accent-swatch[data-accent="green"]{--swatch:#65d1a0 !important;background:#65d1a0 !important}
+.accent-swatch[data-accent="red"]{--swatch:#ff8296 !important;background:#ff8296 !important}
+.accent-swatch[data-accent="gold"]{--swatch:#f2ba5e !important;background:#f2ba5e !important}
+.timer-shade{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:15px;padding:12px 16px;border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);border-radius:12px;color:var(--text);background:var(--surface);font-size:12px}
+.timer-shade strong{color:var(--accent-pale);font-size:13px}
+.chat-connection-panel{margin:20px 0;padding:21px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}
+.chat-connection-panel h3{font-size:17px;margin:0 0 8px}
+.chat-connection-panel .chat-inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:17px 0}
+.chat-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:12px 0}
+.chat-help{color:var(--muted);font-size:12px;line-height:1.6}
+.chat-state{margin:10px 0;color:var(--accent-pale);font-weight:650;font-size:12px}
+@media(max-width:660px){.chat-connection-panel .chat-inputs{grid-template-columns:1fr}}
+
+/* V4.9 — private manual Sales Results inbox */
+.sales-upload-panel{margin:20px 0}
+.sales-file-drop{min-height:154px;border:2px dashed color-mix(in srgb,var(--accent) 46%,var(--border));border-radius:16px;background:color-mix(in srgb,var(--accent) 6%,var(--surface));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;cursor:pointer;text-align:center;padding:22px;transition:.15s ease}
+.sales-file-drop:hover,.sales-file-drop:focus-visible,.sales-file-drop.is-dragover{outline:none;border-color:var(--accent);background:color-mix(in srgb,var(--accent) 15%,var(--surface))}
+.sales-file-drop .upload-glyph{display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 24%,transparent);color:var(--accent-pale);border-radius:14px;width:42px;height:42px;font-size:28px}
+.sales-file-drop strong{font-size:17px;color:var(--text)}
+.sales-file-drop>span:not(.upload-glyph){font-size:13px;color:var(--muted)}
+.sales-file-drop button{margin-top:3px}
+.upload-feedback{margin:15px 0 0;color:var(--accent-pale);font-size:13px;line-height:1.6}
+.sales-image-panel{display:grid;gap:13px;margin-top:17px;padding:15px;border-radius:13px;border:1px solid var(--border);background:var(--surface)}
+.sales-image-panel.hidden,.sales-batch-panel.hidden{display:none}
+.sales-image-panel img{max-height:290px;max-width:100%;width:auto;object-fit:contain;border-radius:11px;justify-self:start}
+.upload-img-controls{display:flex;flex-wrap:wrap;gap:9px}
+.sales-image-panel small{color:var(--muted)}
+.sales-batch-panel{margin-top:18px;padding:15px;border:1px solid var(--border);border-radius:13px;background:var(--surface)}
+.sales-batch-rows{display:grid;gap:8px;max-height:330px;overflow:auto;margin-bottom:14px}
+.sales-batch-row{display:flex;gap:12px;align-items:center;border:1px solid var(--border);border-radius:12px;padding:13px;cursor:pointer;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+.sales-batch-row input{accent-color:var(--accent);width:18px;height:18px;flex-shrink:0}
+.sales-batch-row span{display:grid;gap:4px;min-width:0}
+.sales-batch-row small{color:var(--muted);overflow-wrap:anywhere}
+@media(max-width:650px){.sales-file-drop{padding:18px}.sales-file-drop strong{font-size:16px}.sales-upload-panel{margin-top:13px}}
+

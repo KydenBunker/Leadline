@@ -1,13 +1,13 @@
 {
   "name": "Leadline \u2014 Work Tracker",
   "short_name": "Leadline",
-  "description": "SDR appointments and Project Designer time tracking",
+  "description": "Leadline V5.4 — minimalist analytics, appointment tracking, design hours and earnings",
   "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f5f7f7",
-  "theme_color": "#132c35",
+  "background_color": "#0e1016",
+  "theme_color": "#0e1016",
   "icons": [
     {
       "src": "./icons/icon-192.png",
