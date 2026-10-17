@@ -1,7 +1,7 @@
 {
-  "name": "Leadline — Work Tracker",
+  "name": "Leadline \u2014 Work Tracker",
   "short_name": "Leadline",
-  "description": "Leadline V5.5 — mobile-first work tracking and analytics",
+  "description": "Leadline V5.5 \u2014 mobile-first work tracking and analytics",
   "id": "./",
   "start_url": "./",
   "scope": "./",
@@ -10,13 +10,13 @@
   "theme_color": "#0e1016",
   "icons": [
     {
-      "src": "./icons/icon-192-bw.png",
+      "src": "./icons/icon-192-bw-v552.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "./icons/icon-512-bw.png",
+      "src": "./icons/icon-512-bw-v552.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
