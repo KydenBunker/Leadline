@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./reference-ui.css?v=5.5" />
   <link rel="stylesheet" href="./mobile-v54.css?v=5.5" />
   <link rel="stylesheet" href="./mobile-v55.css?v=5.5" />
-  <title>Leadline V5.5 | Work Tracker</title>
+  <title>Leadline V5.5.1 | Work Tracker</title>
 </head>
 <body>
   <div class="shell">
@@ -83,7 +83,7 @@
         <section class="page hidden" id="page-sales">
           <div class="layout-heading split"><div><div class="eyebrow">SALES DEVELOPMENT <span class="eyebrow-line"></span></div><h1>Sales Wins<span class="mint-dot">.</span></h1><p>Upload a sales result, read a screenshot, or paste a win announcement. Confirm each sale and match it to an appointment before it counts toward your earnings.</p></div><a class="btn btn-outline open-times-quick" href="https://westerntimberframe.com/bent/trust-framework/sdr-availability/" target="_blank" rel="noopener noreferrer">◷ Open Times ↗</a></div>
           <div class="sales-kpis"><div class="stat-card"><small>Matched sales</small><strong id="wins-matched">0</strong><span>Confirmed against your log</span></div><div class="stat-card"><small>Project value</small><strong id="wins-value">$0</strong><span>Matched sale amounts only</span></div><div class="stat-card"><small>Est. commission</small><strong id="wins-commission">$0</strong><span>At your configured SDR rate</span></div><div class="stat-card"><small>Need matching</small><strong id="wins-pending">0</strong><span>Not included in earnings</span></div></div>
-          <section class="panel sales-trend-panel"><div class="panel-title"><div><h3>Sales value over time</h3><p>Daily confirmed project value, based on the sale-post date</p></div><span class="badge-quiet" id="wins-period-total">$0 total</span></div><div class="chart-toolbar"><button data-sales-days="7">7D</button><button data-sales-days="30" class="selected">30D</button><button data-sales-days="90">90D</button><button data-sales-days="365">1Y</button></div><div id="wins-chart" class="trend-chart" role="img" aria-label="Matched sales by day"></div><div id="wins-chart-selection" class="chart-detail">Tap a day to see its sales amount</div></section>
+          <section class="panel sales-trend-panel"><div class="panel-title"><div><h3>Sales value over time</h3><p>Daily confirmed project value, based on the sale-post date · totals above are all time</p></div><span class="badge-quiet" id="wins-period-total">$0 total</span></div><div class="chart-toolbar"><button data-sales-days="7">7D</button><button data-sales-days="30" class="selected">30D</button><button data-sales-days="90">90D</button><button data-sales-days="365">1Y</button></div><div id="wins-chart" class="trend-chart" role="img" aria-label="Matched sales by day"></div><div id="wins-chart-selection" class="chart-detail">Tap a day to see its sales amount</div></section>
           <section class="panel sales-upload-panel" aria-label="Upload Sales Results">
             <div class="panel-title"><div><div class="eyebrow">MANUAL SALES INBOX</div><h3>Upload Sales Results</h3><p>Drop in a sales announcement, screenshot, or CSV export. No Google Chat connection required.</p></div><span class="badge-quiet">REVIEW FIRST</span></div>
             <div id="sales-file-drop" class="sales-file-drop" tabindex="0" role="button" aria-label="Choose a sales result file">
@@ -155,8 +155,11 @@
         </section>
         <section class="page hidden" id="page-income">
           <div class="layout-heading"><div class="eyebrow">BOTH WESTERN TIMBER FRAME ROLES</div><h1>Income overview<span class="mint-dot">.</span></h1><p>Estimated Designer wages and SDR commissions together. Keep actual payments separate.</p></div>
+          <div class="panel-title"><div><h3>All-time earnings estimates</h3><p>All matched sales, including older sales · not money received</p></div></div>
+          <div id="v551-income-lifetime" class="v5-kpis"></div>
+          <div class="panel-title"><div><h3>Last 30 days</h3><p>Sales are counted by the date recorded for each win.</p></div></div>
           <div id="v5-income-kpis" class="v5-kpis"></div>
-          <div class="v5-two"><section class="panel"><div class="panel-title"><div><h3>Earnings over time</h3><p>Estimates by week, before taxes</p></div></div><div class="v54-earnings-controls" id="v54-earnings-controls" aria-label="Income graph lines">
+          <div class="v5-two"><section class="panel"><div class="panel-title"><div><h3>Earnings over time</h3><p>Last 12 weeks · estimates by week, before taxes</p></div></div><div class="v54-earnings-controls" id="v54-earnings-controls" aria-label="Income graph lines">
   <label><input type="checkbox" data-income-series="sdr" checked><i class="v54-key sdr"></i> SDR</label>
   <label><input type="checkbox" data-income-series="designer" checked><i class="v54-key designer"></i> Designer</label>
   <label><input type="checkbox" data-income-series="combined" checked><i class="v54-key combined"></i> Combined</label>
@@ -250,7 +253,7 @@ Leadline will recognize the meeting type, project type and source automatically.
   </script>
   <script src="./formatter.js?v=5.5" defer></script>
   <script src="./sales.js?v=5.5" defer></script>
-  <script src="./app.js?v=5.5-bw" defer></script>
+  <script src="./app.js?v=5.5.1-income" defer></script>
   <script src="./effects.js?v=5.5" defer></script>
   <script src="./mobile-v54.js?v=5.5" defer></script>
 </body>

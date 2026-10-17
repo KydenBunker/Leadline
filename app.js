@@ -1071,7 +1071,9 @@
   }
   function v5Income(){
     const maps=v5MetricMaps(),dates=v5Dates(v5Shift(today(),-29),today()),monthlyDesigner=v5MetricSum(maps.earnings,dates),monthlySDR=v5MetricSum(maps.commissions,dates),paid=state.v5.payments.reduce((sum,x)=>sum+x.amount,0);
-    const allEstimated=[...maps.earnings.values()].reduce((a,b)=>a+b,0)+[...maps.commissions.values()].reduce((a,b)=>a+b,0);
+    const lifetimeDesigner=[...maps.earnings.values()].reduce((a,b)=>a+b,0);
+    const lifetimeSDR=linkedSales().reduce((sum,win)=>sum+(win.amount||0),0)*state.commissionRate/100;
+    v5Pick('v551-income-lifetime').innerHTML=v5Card('SDR commission · all time',money(lifetimeSDR),'Matches Sales Wins estimate')+v5Card('Designer wages · all time',state.designerPrefs.rate==null?'Set hourly rate':money(lifetimeDesigner),'Estimated from saved hours')+v5Card('Combined · all time',state.designerPrefs.rate==null?'Incomplete':money(lifetimeSDR+lifetimeDesigner),'Gross estimate, not paid');
     v5Pick('v5-income-kpis').innerHTML=v5Card('Designer · 30 days',state.designerPrefs.rate==null?'Set hourly rate':money(monthlyDesigner),'Gross estimate')+v5Card('SDR · 30 days',money(monthlySDR),'Matched wins only')+v5Card('Total est. · 30 days',state.designerPrefs.rate==null?'Incomplete':money(monthlyDesigner+monthlySDR),'Gross, before taxes')+v5Card('Payments recorded',money(paid),'All time · entered manually');
     const weekly=new Map();
     for(const d of v5Dates(v5Shift(today(),-83),today())){
